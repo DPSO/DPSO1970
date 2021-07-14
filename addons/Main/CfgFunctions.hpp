@@ -4,7 +4,7 @@ class CfgFunctions {
 		tag = "DPSO";
 		class Main {
 
-			file = "z\dpso\addons\Main\Functions\DPSO";
+			file = "z\dpso\addons\main\Functions\DPSO";
 			class AddCueCards {};
 			class ArsenalLoadSave {};
 			class DynamicSim {};
@@ -35,7 +35,7 @@ class CfgFunctions {
 		tag = "CHVD";
 		class script
 		{
-			file = "z\dpso\addons\Main\Functions\CHVD";
+			file = "z\dpso\addons\main\Functions\CHVD";
 			class onSliderChange {};
 			class onLBSelChanged {};
 			class onLBSelChanged_syncmode {};
@@ -61,7 +61,7 @@ class CfgFunctions {
 		tag = "YAINA_F";
 
 		class General {
-			file = "z\dpso\addons\Main\Functions\YAINA\General";
+			file = "z\dpso\addons\main\Functions\YAINA\General";
 			class crewNames {};
 			class formatDuration {};
 			class showFPS {};

@@ -274,40 +274,7 @@ class CfgWorlds
 		};
 	};
 
-	class gm_weferlingen_summer: CAWorld
-	{
-		class Grid: Grid
-		{
-			class Zoom1
-			{
-				zoomMax=0.0049999999;
-				format="XY";
-				formatX="0000";
-				formatY="0000";
-				stepX=10;
-				stepY=-10;
-			};
-			class Zoom2
-			{
-				zoomMax=0.050000001;
-				format="XY";
-				formatX="000";
-				formatY="000";
-				stepX=100;
-				stepY=-100;
-			};
-			class Zoom3
-			{
-				zoomMax=1;
-				format="XY";
-				formatX="00";
-				formatY="00";
-				stepX=1000;
-				stepY=-1000;
-			};
-		};
-	};
-	class gm_weferlingen_winter: gm_weferlingen_summer
+	class cam_lao_nam: CAWorld
 	{
 		class Grid: Grid
 		{

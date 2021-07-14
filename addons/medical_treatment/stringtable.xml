@@ -4,33 +4,33 @@
         <!--
             MEDICATIONS
         -->
-        <Key ID="STR_AFMED_Medical_Treatment_Apap_DisplayName">
+        <Key ID="STR_DPSO_Medical_Treatment_Apap_DisplayName">
             <English>Aspirn</English>
             <Polish>Apap tabletka</Polish>
         </Key>
-        <Key ID="STR_AFMED_Medical_Treatment_Apap_Desc_Short">
+        <Key ID="STR_DPSO_Medical_Treatment_Apap_Desc_Short">
             <English>Used to combat light pain experiences. No side effects.</English>
             <Polish>Lekkie działanie przeciwbólowe. Brak efektów ubocznych.</Polish>
         </Key>
         <!--
-        <Key ID="STR_AFMED_Medical_Treatment_Apap_Desc_Use">
+        <Key ID="STR_DPSO_Medical_Treatment_Apap_Desc_Use">
             <English></English>
             <Polish></Polish>
         </Key>
         -->
-        <Key ID="STR_AFMED_Medical_Treatment_Eat_Apap">
+        <Key ID="STR_DPSO_Medical_Treatment_Eat_Apap">
             <English>Eat Aspirn</English>
             <Polish>Zjedz Apap</Polish>
         </Key>
-        <Key ID="STR_AFMED_Medical_Treatment_Eating_Apap">
+        <Key ID="STR_DPSO_Medical_Treatment_Eating_Apap">
             <English>Eating Aspirn...</English>
             <Polish>Zjadanie Apapu...</Polish>
         </Key>
-        <Key ID="STR_AFMED_Medical_Treatment_Administer_Apap">
+        <Key ID="STR_DPSO_Medical_Treatment_Administer_Apap">
             <English>Administer Aspirn</English>
             <Polish>Podaj Apap</Polish>
         </Key>
-        <Key ID="STR_AFMED_Medical_Treatment_Administering_Apap">
+        <Key ID="STR_DPSO_Medical_Treatment_Administering_Apap">
             <English>Administering Aspirn...</English>
             <Polish>Podawanie Apapu...</Polish>
         </Key>

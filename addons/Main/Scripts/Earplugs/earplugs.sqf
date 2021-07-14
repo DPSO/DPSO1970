@@ -15,16 +15,16 @@ if (YAINA_F_PlugsIn isEqualTo true) then {
         
 		player,
 		"<t color='#FF0000'>Remove Earplugs</t>",
-		"z\dpso\addons\Main\Scripts\Earplugs\plugs_out.paa",
-		"z\dpso\addons\Main\Scripts\Earplugs\plugs_out.paa",
+		"z\dpso\addons\main\Scripts\Earplugs\plugs_out.paa",
+		"z\dpso\addons\main\Scripts\Earplugs\plugs_out.paa",
 		"_target == _this",
 		"true",
 		{},
 		{},
 		{   
             YAINA_F_PlugsIn = false;
-            [] execVM "z\dpso\addons\Main\Scripts\Earplugs\earplugs.sqf";
-            ["<img image='z\dpso\addons\Main\Scripts\Earplugs\plugs_out.paa' /><br/><t valign='middle' align='center' size='.4'>Earplugs Removed</t>",-1,-1,4,1,0,789] spawn BIS_fnc_dynamicText;
+            [] execVM "z\dpso\addons\main\Scripts\Earplugs\earplugs.sqf";
+            ["<img image='z\dpso\addons\main\Scripts\Earplugs\plugs_out.paa' /><br/><t valign='middle' align='center' size='.4'>Earplugs Removed</t>",-1,-1,4,1,0,789] spawn BIS_fnc_dynamicText;
         },
 		{},
 		[],
@@ -42,16 +42,16 @@ if (YAINA_F_PlugsIn isEqualTo false) then {
         
 		player,
 		"<t color='#00FF00'>Insert Earplugs</t>",
-		"z\dpso\addons\Main\Scripts\Earplugs\plugs_in.paa",
-		"z\dpso\addons\Main\Scripts\Earplugs\plugs_in.paa",
+		"z\dpso\addons\main\Scripts\Earplugs\plugs_in.paa",
+		"z\dpso\addons\main\Scripts\Earplugs\plugs_in.paa",
 		"_target == _this",
 		"true",
 		{},
 		{},
 		{   
             YAINA_F_PlugsIn = true;
-            [] execVM "z\dpso\addons\Main\Scripts\Earplugs\earplugs.sqf";
-            ["<img image='z\dpso\addons\Main\Scripts\Earplugs\plugs_in.paa' /><br/><t valign='middle' align='center' size='.4'>Earplugs Fitted</t>",-1,-1,4,1,0,789] spawn BIS_fnc_dynamicText;
+            [] execVM "z\dpso\addons\main\Scripts\Earplugs\earplugs.sqf";
+            ["<img image='z\dpso\addons\main\Scripts\Earplugs\plugs_in.paa' /><br/><t valign='middle' align='center' size='.4'>Earplugs Fitted</t>",-1,-1,4,1,0,789] spawn BIS_fnc_dynamicText;
         },
 		{},
 		[],

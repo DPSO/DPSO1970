@@ -105,7 +105,11 @@ _ArsenalType = call {
             "vn_m19_binocs_grey",
             "vn_mk21_binocs",
             "vn_anpvs2_binoc",
-            "FirstAidKit"      
+            "FirstAidKit",
+            "DPSO_FirstAid",
+            "DPSO_MedicArea",
+            "AFMED_apap",
+            "DPSO_MedicKit"     
         ];
 
         _AvailableHeadgear = [
@@ -359,13 +363,11 @@ _ArsenalType = call {
             "vn_g_spectacles_02"
         ];
 
-        _AvailableVests = [
-            
-        ];
+        _AvailableVests = ["vn_b_item_rations_01","vn_prop_drink_05"];
 
         _AvailableBackpacks = [
             "B_Parachute",
-            "ACE_NonSteerableParachute",
+            "ACE_NonSteerableParachute"
         ];
 
         _AvailableAttachments = [

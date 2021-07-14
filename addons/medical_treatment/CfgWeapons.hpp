@@ -3,7 +3,6 @@ class CfgWeapons {
     class CBA_MiscItem_ItemInfo;
     class AFMED_apap: ACE_ItemCore {
         scope = 2;
-        scopeCurator = 2;
         author = "ArmaForces";
         displayName = CSTRING(Apap_DisplayName);
         picture = QPATHTOF(ui\icons\apap.paa);

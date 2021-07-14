@@ -1,5 +1,6 @@
 #define COMPONENT medical_treatment
-#include "\z\dpso\addons\main\script_mod.hpp"
+
+#include "..\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
@@ -11,7 +12,7 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_MEDICAL_TREATMENT
 #endif
 
-#include "\z\dpso\addons\main\script_macros.hpp"
+#include "..\main\script_macros.hpp"
 
 // The best choice for given wound
 #define SUPER_EFF_BASE \
