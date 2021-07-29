@@ -1,4 +1,4 @@
-name = "DPSO 1990 v1";
+name = "DPSO 1970";
 picture = "cow.paa";
 actionName = "WebSite";
 action = "https://armadocs.purplesmoke.info/";

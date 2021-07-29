@@ -19,14 +19,7 @@ Its based/inspired on/by the following projects;
 - https://github.com/last-resort-gaming/LRG-Fundamentals - MIT License
 - https://github.com/TMF3/TMF - Offical license: Arma Public License Share-Alike (APL-SA)
 - https://github.com/BourbonWarfare/POTATO - GNU General Public License (GPLv2).
-- https://github.com/quies-in-proelium/qipBFT - Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
-- https://github.com/quies-in-proelium/qipMissionTPL - Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 
-and CTAB, (so many to thank and give credit)
-"jetelain","Gundy, Riouken, Raspu"
-based on https://github.com/jetelain/cTab - GNU General Public License v2.0
-
-you can find the DPSO Version at https://github.com/DPSO/cTab-1
 
 (I know I forgot a few, I will work on getting those mentions put in)
 
