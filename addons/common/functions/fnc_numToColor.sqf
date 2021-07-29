@@ -1,5 +1,5 @@
 /*
- * Name: DPSO_common_fnc_numToColor
+ * Name: dpso_common_fnc_numToColor
  * Author: Snippers
  *
  * Arguments:

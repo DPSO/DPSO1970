@@ -36,5 +36,5 @@ if (_offset isEqualTo []) then {_offset = [0,0,0];};
 // -------------------------------------------------------------------------------------------------
 
 if (missionNamespace getVariable ["ace_medical_allowLitterCreation", false]) then {
-	[_unit, _className, _offset] remoteExecCall ["DPSO_fnc_createLitterServer", 2];
+	[_unit, _className, _offset] remoteExecCall ["dpso_fnc_createLitterServer", 2];
 };

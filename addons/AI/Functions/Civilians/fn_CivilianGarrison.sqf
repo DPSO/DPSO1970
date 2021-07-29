@@ -1,5 +1,5 @@
 /*
-Function: DPSO_fnc_CivilianGarrison
+Function: dpso_fnc_CivilianGarrison
 
 Description:
 	Garrison buildings in given radius around given position, using

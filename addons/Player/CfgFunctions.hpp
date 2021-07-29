@@ -1,10 +1,10 @@
 
-class DPSO_Player {
+class dpso_Player {
 
-	tag = "DPSO";
+	tag = "dpso";
 	class Player {
 
-		file = "z\dpso\Addons\Player\Functions";
+		file = "z\dpso\addons\Player\Functions";
 		class ConfigPlayer {};
 	};
 };

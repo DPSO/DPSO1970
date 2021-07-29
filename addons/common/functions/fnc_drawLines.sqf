@@ -1,5 +1,5 @@
 /*
- * Name: DPSO_common_fnc_drawLines
+ * Name: dpso_common_fnc_drawLines
  * Author: Head
  *
  * Arguments:

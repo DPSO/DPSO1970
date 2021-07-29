@@ -2,7 +2,7 @@
 
 private _output = [];
 
-private _briefingArray = getMissionConfigValue ["DPSO_Briefing","[]"];
+private _briefingArray = getMissionConfigValue ["dpso_Briefing","[]"];
 if (_briefingArray isEqualTo "[]") exitWith {[]};
 if (_briefingArray isEqualType "") then { _briefingArray = call compile _briefingArray;};
 
@@ -53,9 +53,9 @@ private _conditions = [];
     private _unit = _x;
     private _unitGroup = group _unit;
     
-    private _groupCond = _unitGroup getVariable ["DPSO_Briefinglist", []];
+    private _groupCond = _unitGroup getVariable ["dpso_Briefinglist", []];
     if (_groupCond isEqualType "") then { _groupCond = call compile _groupCond; };
-    private _unitCond = _unit getVariable ["DPSO_Briefinglist", []];
+    private _unitCond = _unit getVariable ["dpso_Briefinglist", []];
     if (_unitCond isEqualType "") then { _unitCond = call compile _unitCond; };
     
     if (count (_groupCond + _unitCond) > 0) then {

@@ -1,27 +1,6 @@
 #include "\x\cba\addons\main\script_macros_common.hpp"
-#include "\z\ace\addons\main\script_macros.hpp"
 #include "\x\cba\addons\xeh\script_xeh.hpp"
-
 #include "script_version.hpp"
-
-// Change PREP to point to folder
-#define DFUNC(module) TRIPLES(ADDON,fnc,module)
-
-#ifdef DISABLE_COMPILE_CACHE
-    #undef PREP
-    #define PREP(var1) TRIPLES(ADDON,fnc,var1) = compile preProcessFileLineNumbers 'PATHTO_SYS(PREFIX,COMPONENT_F,DOUBLES(functions\fnc,var1))'
-    #define PREP(fncName) DFUNC(fncName) = compile preprocessFileLineNumbers QPATHTOF(functions\DOUBLES(fnc,fncName).sqf)
-    #undef PREPMAIN
-    #define PREPMAIN(var1) TRIPLES(PREFIX,fnc,var1) = compile preProcessFileLineNumbers 'PATHTO_SYS(PREFIX,COMPONENT_F,DOUBLES(functions\fnc,var1))'
-#else
-    #undef PREP
-    #define PREP(var1) ['PATHTO_SYS(PREFIX,COMPONENT_F,DOUBLES(functions\fnc,var1))', 'TRIPLES(ADDON,fnc,var1)'] call SLX_XEH_COMPILE_NEW
-     #define PREP(fncName) [QPATHTOF(functions\DOUBLES(fnc,fncName).sqf), QFUNC(fncName)] call CBA_fnc_compileFunction
-    #undef PREPMAIN
-    #define PREPMAIN(var1) ['PATHTO_SYS(PREFIX,COMPONENT_F,DOUBLES(functions\fnc,var1))', 'TRIPLES(PREFIX,fnc,var1)'] call SLX_XEH_COMPILE_NEW
-#endif
-
-#define ACE_MASSTOKG(x) ((round ((x) * 0.1 * (1/2.2046) * 100)) / 100)
 
 // XEH templates
 #define XEH_POSTINIT                                    \
@@ -45,6 +24,23 @@ class Extended_PreStart_EventHandlers {                 \
     };                                                  \
 }
 
+// Change PREP to point to folder
+#define DFUNC(module) TRIPLES(ADDON,fnc,module)
+
+#ifdef DISABLE_COMPILE_CACHE
+    #undef PREP
+    #define PREP(var1) TRIPLES(ADDON,fnc,var1) = compile preProcessFileLineNumbers 'PATHTO_SYS(PREFIX,COMPONENT_F,DOUBLES(functions\fnc,var1))'
+    #define PREP(fncName) DFUNC(fncName) = compile preprocessFileLineNumbers QPATHTOF(functions\DOUBLES(fnc,fncName).sqf)
+    #undef PREPMAIN
+    #define PREPMAIN(var1) TRIPLES(PREFIX,fnc,var1) = compile preProcessFileLineNumbers 'PATHTO_SYS(PREFIX,COMPONENT_F,DOUBLES(functions\fnc,var1))'
+#else
+    #undef PREP
+    #define PREP(var1) ['PATHTO_SYS(PREFIX,COMPONENT_F,DOUBLES(functions\fnc,var1))', 'TRIPLES(ADDON,fnc,var1)'] call SLX_XEH_COMPILE_NEW
+     #define PREP(fncName) [QPATHTOF(functions\DOUBLES(fnc,fncName).sqf), QFUNC(fncName)] call CBA_fnc_compileFunction
+    #undef PREPMAIN
+    #define PREPMAIN(var1) ['PATHTO_SYS(PREFIX,COMPONENT_F,DOUBLES(functions\fnc,var1))', 'TRIPLES(PREFIX,fnc,var1)'] call SLX_XEH_COMPILE_NEW
+#endif
+
 // Expanding on CBA macros
 #define CFUNC(var) EFUNC(common,var)
 #define QCFUNC(var) QUOTE(CFUNC(var))
@@ -52,38 +48,19 @@ class Extended_PreStart_EventHandlers {                 \
 // Chat macros
 #define IS_CMND_AVAILABLE(var,cmnd) if !([var,cmnd] call EFUNC(chat,commandAvailable)) exitWith {}
 
-// ACE3 reference macros
-#define ACE_PREFIX ace
-
-#define ACE_ADDON(module) DOUBLES(ACE_PREFIX,module)
-
-#define ACEGVAR(module,var)         TRIPLES(ACE_PREFIX,module,var)
-#define QACEGVAR(module,var)        QUOTE(ACEGVAR(module,var))
-
-#define ACEFUNC(module,function)    TRIPLES(DOUBLES(ACE_PREFIX,module),fnc,function)
-#define QACEFUNC(module,function)   QUOTE(ACEFUNC(module,function))
-
-#define ACELSTRING(module,string)   QUOTE(TRIPLES(STR,DOUBLES(ACE_PREFIX,module),string))
-#define ACECSTRING(module,string)   QUOTE(TRIPLES($STR,DOUBLES(ACE_PREFIX,module),string))
-
-// AFM macros
 #define IS_MOD_LOADED(modclass)     (isClass (configFile >> "CfgPatches" >> #modclass))
-
-// AFM Debug macros
-#include "\z\dpso\addons\main\script_debug.hpp"
 
 // Class
 #define CLASS(var1) DOUBLES(PREFIX,var1)
 #define QCLASS(var1) QUOTE(DOUBLES(PREFIX,var1))
 
 // Internal
-/* #define DOUBLES(var1,var2) ##var1##_##var2
-#define TRIPLES(var1,var2,var3) ##var1##_##var2##_##var3 */
+#define DOUBLES(var1,var2) ##var1##_##var2
+#define TRIPLES(var1,var2,var3) ##var1##_##var2##_##var3
 #define ADDON DOUBLES(PREFIX,COMPONENT)
 
 // Main
 #define QUOTE(var1) #var1
-#define VERSION_CONFIG version = MAJOR.MINOR; versionStr = QUOTE(MAJOR.MINOR.PATCH.BUILD); versionAr[] = {MAJOR,MINOR,PATCH,BUILD}
 
 // Stringtable
 #define CSTRING(var1) QUOTE(TRIPLES($STR,ADDON,var1))

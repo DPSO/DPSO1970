@@ -33,7 +33,7 @@ _terrainIndex = switch (true) do {
 _terrainIndex = (_terrainIndex + _updateType) max 0 min 4;
 _terrainGrid = _terrainGridArray select _terrainIndex;
 
-if (!DPSO_Main_ViewDistanceNoGrass) then {
+if (!dpso_Main_ViewDistanceNoGrass) then {
 	_terrainIndex = _terrainIndex max 1;
 	_terrainGrid = _terrainGrid min 48.99;
 };

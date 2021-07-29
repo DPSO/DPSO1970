@@ -29,7 +29,7 @@ check = [
     "!version_set"
 ]
 releasebuild = [
-    "@zip DPSO1970_v{{semver.major}}.{{semver.minor}}.{{semver.patch}}.{{semver.build}}",
+    "@zip dpso1970_v{{semver.major}}.{{semver.minor}}.{{semver.patch}}.{{semver.build}}",
     "!version_unset"
 ]
 

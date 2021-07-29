@@ -1,8 +1,8 @@
 /*
-Function: DPSO_fnc_SpawnAIZeusWrapper
+Function: dpso_fnc_SpawnAIZeusWrapper
 
 Description:
-	Wraps calls to DPSO_fnc_SpawnAI for use with the Zeus Modules.
+	Wraps calls to dpso_fnc_SpawnAI for use with the Zeus Modules.
 
 Arguments:
 	_side - The side of the AI to spawn <STRING>
@@ -18,14 +18,13 @@ Author:
 	Mokka
 */
 
-#define EAST_FACTIONS ["Vanilla - CSAT", "Vanilla - CSAT (Pacific)","@CFP - Abu Sayyaf Group", "@CFP - Al Qaeda", "@CFP - Al-Shabaab", "@CFP - Ansar Allah (Houthis)", "@CFP - Boko Haram", "@CFP - Central African Rebels", "@CFP - Chernarussian Movement of the Red Star Winter", "@CFP - Hamas Al Qassam Brigades", "@CFP - Hezbollah", "@CFP - Iraqi Army (Hussein Regime)", "@CFP - Islamic Republic of Iran Army", "@CFP - Islamic State", "@CFP - Korean People's Army", "@CFP - Russian Ground Forces (Arid / Desert)", "@CFP - Russian National Guard", "@CFP - Sudanese Armed Forces", "@CFP - Sudan Rapid Support Forces / Janjaweed", "@CFP - Somali Rebels", "@CFP - Sudan People's Liberation Movement", "@CFP - Syrian Arab Army", "@CFP - Taliban Insurgents", "@CUP - Chernarussian Movement of the Red Star", "@CUP - Russian Federation", "@CUP - Sahrani Liberation Army", "@CUP - Takistan Army", "@CUP - Takistan Militia"]
-#define EAST_FACTIONS_LOOKUP ["OPF_F", "OPF_T_F", "CFP_O_ABUSAYYAF", "CFP_O_ALQAEDA", "CFP_O_ALSHABAAB", "CFP_O_ANSARALLAH","CFP_O_BOKOHARAM", "CFP_O_CFRebels", "CFP_O_CHDKZ_SNW", "CFP_O_HAMAS", "CFP_O_HEZBOLLAH", "CFP_O_IQARMY", "CFP_O_IRARMY", "CFP_O_IS", "CFP_O_NKARMY", "CFP_O_RUARMY_DES", "CFP_O_RUMVD", "CFP_O_SDARMY", "CFP_O_SDMilitia", "CFP_O_SOREBEL", "CFP_O_SSREBELS", "CFP_O_SYARMY","CFP_O_TBAN", "CUP_O_ChDKZ", "CUP_O_RU", "CUP_O_SLA", "CUP_O_TK", "CUP_O_TK_MILITIA"]
+#define EAST_FACTIONS ["Vanilla - CSAT", "Vanilla - CSAT (Pacific)", "@UNSUNG - NVA", "S.O.G. PRAIRIE FIRE VC", "S.O.G. PRAIRIE FIRE PAVN"]
+#define INDEP_FACTIONS ["Vanilla - AAF", "Vanilla - Syndikat", "S.O.G. PRAIRIE FIRE ARVN"]
+#define WEST_FACTIONS ["Vanilla - NATO", "Vanilla - NATO (Pacific)", "S.O.G. PRAIRIE FIRE MACV"]
 
-#define INDEP_FACTIONS ["Vanilla - AAF", "Vanilla - Syndikat","@CFP - al-Nusra Front", "@CFP - Islamic State", "@CFP - Sudan People's Liberation Movement North", "@CFP - Sudan Revolutionary Front", "@CFP - South Sudan People's Defense Force", "@CFP - Tuareg Rebels", "@CFP - Western Ultranationalists", "@CUP - National Part of Chernarus", "@CUP - ION PMC", "@CUP - Royal Army Corps of Sahrani", "@CUP - Takistani Locals", "@CUP - United Nations"]
-#define INDEP_FACTIONS_LOOKUP ["IND_F", "IND_C_F", "CFP_I_ALNUSRA", "CFP_I_IS", "CFP_I_SDRebels", "CFP_I_SDRebelsrf", "CFP_I_SSArmy", "CFP_I_TUAREG", "CFP_I_WestUltra", "CUP_I_NAPA", "CUP_I_PMC_ION", "CUP_I_RACS", "CUP_I_TK_GUE", "CUP_I_UN"]
-
-#define WEST_FACTIONS ["Vanilla - NATO", "Vanilla - NATO (Pacific)", "@CFP - Afghan Army", "@CFP - Afghan Police", "@CFP - Chadian Armed Forces", "@CFP - Chernarus Defense Forces [Winter]", "@CFP - Israeli Defense Force", "@CFP - Iraqi Army", "@CFP - Iraqi Police", "@CFP - Kenyan Defense Force", "@CFP - Malian Government Forces", "@CFP - Nigerian Army", "@CFP - Peshmerga", "@CFP - Uganda People's Defense Force", "@CFP - US Army 1991 [Arid/Desert]", "@CFP - US Army 1991 [Woodland]", "@CFP - US Army 2003 [Arid/Desert]", "@CFP - US Army 2003 [Woodland]", "@CFP - US CIA (Middle East)", "@CFP - US 75th Rangers (Jungle/Woodland)", "@CFP - US Navy Seals (Arid / Desert)", "@CFP - US Navy Seals (Jungle / Woodland)", "@CFP - YPG", "@CUP - Army of the Czech Republic", "@CUP - British Armed Forces", "@CUP - Bundeswehr", "@CUP - United States Army"]
-#define WEST_FACTIONS_LOOKUP ["BLU_F", "BLU_T_F", "CFP_B_AFARMY", "CFP_B_AFGPOLICE", "CFP_B_CAF", "CFP_B_CDF_SNW", "CFP_B_ILIDF", "CFP_B_IQARMY", "CFP_B_IQPOLICE", "CFP_B_KEARMY", "CFP_B_MLARMY", "CFP_B_NAARMY", "CFP_B_PESH", "CFP_B_UGARMY", "CFP_B_USARMY_1991_DES", "CFP_B_USARMY_1991_WDL", "CFP_B_USARMY_2003_DES", "CFP_B_USARMY_2003_WDL", "CFP_B_USCI", "CFP_B_USRANGERS_WDL", "CFP_B_USSEALS_DES", "CFP_B_USSEALS_WDL", "CFP_B_YPG", "CUP_B_CZ", "CUP_B_GB", "CUP_B_GER", "CUP_B_US_Army"]
+#define EAST_FACTIONS_LOOKUP ["OPF_F", "OPF_T_F", "UNSUNG_E_NVA", "O_VC", "O_PAVN"]
+#define INDEP_FACTIONS_LOOKUP ["IND_F", "IND_C_F", "I_ARVN"]
+#define WEST_FACTIONS_LOOKUP ["BLU_F", "BLU_T_F", "B_MACV"]
 
 params [["_side", ""], ["_pos", [0, 0, 0]]];
 
@@ -138,7 +137,7 @@ private _dialogResult = [
 			[_vehmrapMin, _vehmrapMax],
 			[_vehheavyMin, _vehheavyMax],
 			[_vehrandMin, _vehrandMax]
-		] remoteExec ["DPSO_fnc_SpawnAI", 2];
+		] remoteExec ["dpso_fnc_SpawnAI", 2];
 	},
 	{},
 	[_pos]

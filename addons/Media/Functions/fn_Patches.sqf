@@ -1,5 +1,5 @@
 /*
-Function: DPSO_fnc_Patches
+Function: dpso_fnc_Patches
 
 Description:
 	Apply Section Patches to Players/Vehicles
@@ -37,7 +37,7 @@ call {
 	_PatchClass = "bolo";
 };
 
-// ===== Apply the Patch to player.
+// ===== Apply the Patch to player.	
 
 [BIS_fnc_setUnitInsignia, [_unit,_PatchClass], 5] call CBA_fnc_waitAndExecute;
 

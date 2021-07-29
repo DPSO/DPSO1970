@@ -4,9 +4,9 @@ if (!hasInterface) exitwith {};
 
 private ["_vehicle", "_fnc_checkAccess"];
 
-switch (DPSO_Main_MaydayAccess) do {
+switch (dpso_Main_MaydayAccess) do {
 	case 0: { _fnc_checkAccess = {false}; };
-	case 1: { _fnc_checkAccess = {(_this getVariable ["DPSO_Section", -1]) isEqualTo "909 EAW"}; };
+	case 1: { _fnc_checkAccess = {(_this getVariable ["dpso_Section", -1]) isEqualTo "909 EAW"}; };
 	case 2: { _fnc_checkAccess = {true}; };
 	default { _fnc_checkAccess = {true}; };
 };
@@ -40,11 +40,11 @@ switch (DPSO_Main_MaydayAccess) do {
 						_args params ["_unit", "_vehicle"];
 
 						// check if pilot still active
-						if ([_vehicle] call DPSO_fnc_isPilotDown) exitWith {
+						if ([_vehicle] call dpso_fnc_isPilotDown) exitWith {
 							// check if vehicle moving/on the ground
 							if ((round (speed _vehicle) != 0) || (not isTouchingGround _vehicle)) then {
 								// check if player is copilot
-								if (_unit in ([_vehicle] call DPSO_fnc_getCopilots)) then {
+								if (_unit in ([_vehicle] call dpso_fnc_getCopilots)) then {
 									_unit action ["TakeVehicleControl", _vehicle];
 
 									if (not isCopilotEnabled _vehicle) then {
@@ -64,7 +64,7 @@ switch (DPSO_Main_MaydayAccess) do {
 					[_unit, _vehicle]
 				] call CBA_fnc_addPerFrameHandler;
 
-				_vehicle setVariable ["DPSO_MaydayHandle", _handle, false];
+				_vehicle setVariable ["dpso_MaydayHandle", _handle, false];
 			};
 		};
 
@@ -97,7 +97,7 @@ player addEventHandler ["GetOutMan", {
 	params ["_unit", "_role", "_vehicle", "_turret"];
 
 	// remove the mayday check
-	_handle = _vehicle getVariable ["DPSO_MaydayHandle", -1];
+	_handle = _vehicle getVariable ["dpso_MaydayHandle", -1];
 
 	if (_handle != -1) then {
 		[_handle] call CBA_fnc_removePerFrameHandler;

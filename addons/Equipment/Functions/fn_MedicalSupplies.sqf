@@ -1,5 +1,5 @@
 /*
-Function: DPSO_fnc_MedicalSupplies
+Function: dpso_fnc_MedicalSupplies
 
 Description:
 	Used to configure basic container medical state.
@@ -11,8 +11,8 @@ Arguments:
 
 Examples:
 	(begin example)
-		[this] call DPSO_fnc_MedicalSupplies;
-		[this, "MERT", true] call DPSO_fnc_MedicalSupplies;
+		[this] call dpso_fnc_MedicalSupplies;
+		[this, "MERT", true] call dpso_fnc_MedicalSupplies;
 	(end)
 
 Author:
@@ -26,7 +26,7 @@ params [
 	["_purge", false]
 ];
 
-private _VarType = _container getVariable ["DPSO_Equipment_Select", -1];
+private _VarType = _container getVariable ["dpso_Equipment_Select", -1];
 
 call {
 	if (_VarType isEqualto 0) exitwith {_Type = "Limited"};
@@ -42,36 +42,26 @@ call {
 	if (_Type isEqualTo "Limited") exitwith {
 		if (isClass (configFile >> "CfgPatches" >> "ace_main")) then {
 			_ContainerItems = [
-				["DPSO_FirstAid", 4],
-				["ACE_EarPlugs", 4],
-				["ACE_Flashlight_MX991", 1],
-				["ToolKit", 1],
 				["Chemlight_blue", 1],
 				["Chemlight_green", 1],
 				["Chemlight_red", 1]
 			];
 		} else {
 			_ContainerItems = [
-				["FirstAidKit", 20]
+				["vn_b_item_firstaidkit", 20]
 			];
 		};
 	};
 	if (_Type isEqualTo "Standard") exitwith {
 		if (isClass (configFile >> "CfgPatches" >> "ace_main")) then {
 			_ContainerItems = [
-				["DPSO_FirstAid", 4],
-				["DPSO_DuctTape", 1],
-				["ACE_EarPlugs", 4],
-				["DPSO_FireExtinguisher", 1],
-				["ACE_Flashlight_MX991", 1],
-				["ToolKit", 1],
 				["Chemlight_blue", 1],
 				["Chemlight_green", 1],
 				["Chemlight_red", 1]
 			];
 		} else {
 			_ContainerItems = [
-				["FirstAidKit", 30],
+				["vn_b_item_firstaidkit", 30],
 				["Medikit", 2]
 			];
 		};
@@ -79,49 +69,13 @@ call {
 	if (_Type isEqualTo "MERT") exitwith {
 		if (isClass (configFile >> "CfgPatches" >> "ace_main")) then {
 			_ContainerItems = [
-				["DPSO_FirstAid", 4],
-				["DPSO_DuctTape", 1],
-				["ACE_EarPlugs", 4],
-				["DPSO_FireExtinguisher", 1],
-				["ACE_Flashlight_MX991", 1],
-				["ToolKit", 1],
-				["Chemlight_blue", 1],
-				["Chemlight_green", 1],
-				["Chemlight_red", 1],
-				["kat_accuvac", 2],
-				["kat_X_AED", 2],
-				["kat_AED", 2],
-                ["kat_aatKit", 8],
-				["ACE_bodyBag", 8],
-				["DPSO_MedicArea", 1],
-				["DPSO_MedicKit", 8],
-				["ACE_tourniquet", 20],
-				["ACE_surgicalKit", 2],
-				["DPSO_Stethoscope", 2],
-				["ACE_splint", 20],
-				["ACE_salineIV", 20],
-				["ACE_plasmaIV", 20],
-				["ACE_personalAidKit", 4],
-				["ACE_morphine", 20],
-				["kat_guedel", 20],
-				["ACE_epinephrine", 20],
-				["ACE_EarPlugs", 20],
-				["kat_chestSeal", 20],
-				["kat_bloodIV_B", 20],
-				["kat_bloodIV_AB", 20],
-				["kat_bloodIV_A", 20],
-				["kat_bloodIV_O", 20],
-				["ACE_fieldDressing", 20],
-				["ACE_elasticBandage", 20],
-				["ACE_packingBandage", 20],
-				["ACE_quikclot", 20],
-				["ACE_adenosine", 20],
-				["ACE_personalAidKit",4]
+				["vn_b_item_firstaidkit", 50],
+				["vn_b_item_medikit_01", 2]
 			];
 		} else {
 			_ContainerItems = [
-				["FirstAidKit", 50],
-				["Medikit", 2]
+				["vn_b_item_firstaidkit", 50],
+				["vn_b_item_medikit_01", 2]
 			];
 		};
 	};

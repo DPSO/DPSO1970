@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="DPSO">
+<Project name="dpso">
     <Package name="Loading">
-        <Key ID="STR_DPSO_loading_Author">
+        <Key ID="STR_dpso_loading_Author">
             <English>Author: %1</English>
             <Polish>Autor: %1</Polish>
         </Key>

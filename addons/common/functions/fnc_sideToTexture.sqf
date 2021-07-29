@@ -1,5 +1,5 @@
 /*
- * Name: DPSO_common_fnc_sideToTexture
+ * Name: dpso_common_fnc_sideToTexture
  * Author: Snippers
  *
  * Arguments:

@@ -3,7 +3,7 @@ _index = _this select 0;
 _varType = _this select 1;
 _text = _this select 2;
 
-if (!DPSO_Main_ViewDistanceNoGrass) then {
+if (!dpso_Main_ViewDistanceNoGrass) then {
 	_index = _index + 1;
 };
 
@@ -15,7 +15,7 @@ switch (_index) do {
 	case 4: {_terrainGrid = 3.125};
 };
 
-if (!DPSO_Main_ViewDistanceNoGrass) then {
+if (!dpso_Main_ViewDistanceNoGrass) then {
 	_terrainGrid = _terrainGrid min 48.99;
 };
 ctrlSetText [_text, str _terrainGrid];

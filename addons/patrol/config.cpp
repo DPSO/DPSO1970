@@ -4,14 +4,14 @@ class cfgPatches
 {
     class ADDON
     {
-        name = "DPSO: Patrol";
+        name = "dpso: Patrol";
         author = "Head";
         url = URL;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"DPSO_common"};
-        VERSION_CONFIG;
+        requiredAddons[] = {"dpso_common"};
+        version = VERSION;
     };
 };
 

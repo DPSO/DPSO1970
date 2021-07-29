@@ -1,5 +1,5 @@
 /*
-Function: DPSO_fnc_GetValues
+Function: dpso_fnc_GetValues
 
 Description:
 	Get all the values in a map as an array

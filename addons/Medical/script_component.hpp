@@ -1,9 +1,3 @@
-// COMPONENT
-
-#define COMPONENT medical
-#define COMPONENT_BEAUTIFIED Medical
-
-// INCLUDES
+#define COMPONENT MEDICAL
 
 #include "\z\dpso\addons\main\script_mod.hpp"
-#include "\z\dpso\addons\main\script_macros.hpp"

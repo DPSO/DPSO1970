@@ -1,5 +1,5 @@
 /*
- * Name: DPSO_common_fnc_sideToColor
+ * Name: dpso_common_fnc_sideToColor
  * Author: Snippers
  *
  * Arguments:
@@ -13,7 +13,7 @@
  */
  
 //Cache vars for speed
-if (isNil "DPSO_common_blufor_color") then {
+if (isNil "dpso_common_blufor_color") then {
     dpso_common_blufor_color = [blufor] call bis_fnc_sideColor;
     dpso_common_opfor_color = [opfor] call bis_fnc_sideColor;
     dpso_common_indep_color = [independent] call bis_fnc_sideColor;

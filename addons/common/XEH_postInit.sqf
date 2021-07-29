@@ -1,8 +1,8 @@
 #include "\z\dpso\addons\common\script_component.hpp"
 
-// IS DPSO mission
+// IS dpso mission
 
-if (isDPSO) then {
+if (isdpso) then {
     enableSaving [false, false]; // Disable mission saving
     enableSentences false; // Mute AI reports?
 
@@ -56,7 +56,7 @@ if (isDPSO) then {
 // Register event to recieve notification of variable synchorization has been completed.
 [QGVAR(serverVariableSyncResponse),{
     GVAR(VarSync) = true;
-    diag_log "DPSO Common: Variable Synchronization Completed";
+    diag_log "dpso Common: Variable Synchronization Completed";
 }] call CBA_fnc_addEventHandler;
 
 // Send request event to server. Server will respon a frame later with the response being added to back of message queue.
@@ -68,7 +68,7 @@ if (isDPSO) then {
 }] call CBA_fnc_execNextFrame;
 
 ["unit", {
-    DPSO_unit = (_this select 0);
+    dpso_unit = (_this select 0);
 }, true] call CBA_fnc_addPlayerEventHandler;
 
 

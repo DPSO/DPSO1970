@@ -1,22 +1,22 @@
 /*
-Function: DPSO_fnc_ConfigPlayer
+Function: dpso_fnc_ConfigPlayer
 
-name:
+Description:
 	Used to configure basic player attributes and equipment.
 
 Arguments:
 	_unit - Player the setup is applied to. <OBJECT>
 	_Section - The Section the Player is in. <STRING>
 	_Traits - Which Traits the player has, can be more than one. <ARRAY>
-	_Loadout - Name of Loadout to call. Changes player equipment to Loadout from DPSO Fundamentals. <STRING>
+	_Loadout - Name of Loadout to call. Changes player equipment to Loadout from dpso 1970s. <STRING>
 
 Examples:
 	(begin example)
-		[this] call DPSO_fnc_ConfigPlayer;
-		[this, "1 Section"] call DPSO_fnc_ConfigPlayer;
-		[this, "ds999", ["Pilot"]] call DPSO_fnc_ConfigPlayer;
-		[this, "ds990", ["Pilot", "Mission Maker"]] call DPSO_fnc_ConfigPlayer;
-		[this, "ds999", ["Pilot"], "3CB Pilot"] call DPSO_fnc_ConfigPlayer;
+		[this] call dpso_fnc_ConfigPlayer;
+		[this, "1 Section"] call dpso_fnc_ConfigPlayer;
+		[this, "909 EAW", ["Pilot"]] call dpso_fnc_ConfigPlayer;
+		[this, "Command", ["Pilot", "Mission Maker"]] call dpso_fnc_ConfigPlayer;
+		[this, "909 EAW", ["Pilot"], "3CB Pilot"] call dpso_fnc_ConfigPlayer;
 	(end)
 
 Author:
@@ -114,7 +114,7 @@ if (local _unit) then {
 			_unit setVariable ["TFAR_freq_lr", _LongRange, true];
 		} else {
 			group _unit setVariable ["tf_sw_frequency", [0,9,_ShortRange,0,nil,-1,0,false], true];
-			group _unit setVariable ["tf_DPSO_frequency", [0,9,_LongRange,0,nil,-1,0,false], true];
+			group _unit setVariable ["tf_lr_frequency", [0,9,_LongRange,0,nil,-1,0,false], true];
 		};
 	};
 	//========== Trait Config
@@ -141,20 +141,20 @@ if (local _unit) then {
 
 	//========== Loadout Config
 	if !(_Loadout isEqualto []) then {
-		[_unit, _Loadout] call DPSO_fnc_Loadouts;
+		[_unit, _Loadout] call dpso_fnc_Loadouts;
 	};
 
 	//=========== Patches
-	[_unit, _Section] call DPSO_fnc_Patches;
+	[_unit, _Section] call dpso_fnc_Patches;
 
 	//=========== Set Section
-	_unit setVariable ["DPSO_Section", _Section, true];
+	_unit setVariable ["dpso_Section", _Section, true];
 };
 
 //========== SideChat Config
 if (hasinterface) then {
 	if ((isClass (configFile >> "CfgPatches" >> "task_force_radio")) && (EnableSideChat)) then {
-		if ((_Section == "Command") || (_Section == "ds999")) then {
+		if ((_Section == "Command") || (_Section == "909 EAW")) then {
 			1 enablechannel [true, false];
 		};
 	};

@@ -76,7 +76,7 @@ Example:
 
         class CfgPatches {
             class MyMod_main {
-                VERSION_CONFIG;
+                version = VERSION;
             };
         };
     (end)

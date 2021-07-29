@@ -1,6 +1,6 @@
 #include "\z\dpso\addons\common\script_component.hpp"
 /*
- * Name: DPSO_common_fnc_mouseOver
+ * Name: dpso_common_fnc_mouseOver
  * Author: Nick
  *
  * Arguments:

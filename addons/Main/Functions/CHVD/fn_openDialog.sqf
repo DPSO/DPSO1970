@@ -20,7 +20,7 @@ CHVD_loadingDialog = true;
 	sliderSetSpeed [_x select 3, 500, 500];
 	sliderSetPosition [_x select 0, _x select 1];
 	sliderSetPosition [_x select 3, (_x select 4) min (_x select 1)];
-} forEach [[1900,CHVD_foot,DPSO_Main_ViewDistanceMaxDistance,1901,CHVD_footObj,DPSO_Main_ViewDistanceMaxObjectDistance],[1902,CHVD_car,DPSO_Main_ViewDistanceMaxDistance,1903,CHVD_carObj,DPSO_Main_ViewDistanceMaxObjectDistance],[1904,CHVD_air,DPSO_Main_ViewDistanceMaxDistance,1905,CHVD_airObj,DPSO_Main_ViewDistanceMaxObjectDistance]];
+} forEach [[1900,CHVD_foot,dpso_Main_ViewDistanceMaxDistance,1901,CHVD_footObj,dpso_Main_ViewDistanceMaxObjectDistance],[1902,CHVD_car,dpso_Main_ViewDistanceMaxDistance,1903,CHVD_carObj,dpso_Main_ViewDistanceMaxObjectDistance],[1904,CHVD_air,dpso_Main_ViewDistanceMaxDistance,1905,CHVD_airObj,dpso_Main_ViewDistanceMaxObjectDistance]];
 
 {
 	_ctrl = ((findDisplay 2900) displayCtrl (_x select 0));
@@ -66,7 +66,7 @@ CHVD_loadingDialog = true;
 
 {
 	_ctrl = ((findDisplay 2900) displayCtrl (_x select 0));
-	if (DPSO_Main_ViewDistanceNoGrass) then {
+	if (dpso_Main_ViewDistanceNoGrass) then {
 		_textLow = if (isLocalized "STR_chvd_low") then {localize "STR_chvd_low"} else {"Low"};
 		_ctrl lbAdd _textLow;
 	};
@@ -80,7 +80,7 @@ CHVD_loadingDialog = true;
 	_ctrl lbAdd _textUltra;
 	
 	_sel = [_x select 1] call CHVD_fnc_selTerrainQuality;
-	if (DPSO_Main_ViewDistanceNoGrass) then {
+	if (dpso_Main_ViewDistanceNoGrass) then {
 		_ctrl lbSetCurSel _sel;
 	} else {
 		_ctrl lbSetCurSel (_sel - 1);

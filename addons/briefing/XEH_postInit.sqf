@@ -2,7 +2,7 @@
 
 if (!hasInterface) exitWith {};
 
-GVAR(addLoadoutNotes) = getMissionConfigValue ["DPSO_Briefing_Loadout",false];
+GVAR(addLoadoutNotes) = getMissionConfigValue ["dpso_Briefing_Loadout",false];
 
 //Ensure there is a delay...
 //GVAR(briefingFrame) = 0;

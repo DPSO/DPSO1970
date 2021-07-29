@@ -33,7 +33,7 @@ if (_hint_option_cba) then {
 	
 	_text = format [hint_tpl_liner_1, _text];
 	
-	[_text, -1, -1] call DPSO_fnc_hint;
+	[_text, -1, -1] call dpso_fnc_hint;
 	
 } else {
 	

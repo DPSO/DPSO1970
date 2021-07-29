@@ -19,7 +19,7 @@ if (player getUnitTrait "Mission Maker") then {
 		true,
 		"Completing Mission",
 		false
-	] call DPSO_fnc_AddHoldAction;
+	] call dpso_fnc_AddHoldAction;
 
 	[
 		player,
@@ -37,5 +37,5 @@ if (player getUnitTrait "Mission Maker") then {
 		true,
 		"Failing Mission",
 		false
-	] call DPSO_fnc_AddHoldAction;
+	] call dpso_fnc_AddHoldAction;
 };

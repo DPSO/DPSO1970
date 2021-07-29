@@ -2,10 +2,10 @@
 
 private ["_uavIntro","_uavIntroPosition","_uavIntroText"];
 
-if (getMarkerColor "DPSO_uavIntroMarker" == "") then {
-    _uavIntroPosition = vehicle DPSO_unit;
+if (getMarkerColor "dpso_uavIntroMarker" == "") then {
+    _uavIntroPosition = vehicle dpso_unit;
 } else {
-    _uavIntroPosition = getMarkerPos "DPSO_uavIntroMarker";
+    _uavIntroPosition = getMarkerPos "dpso_uavIntroMarker";
 };
 
 if (GVAR(uavIntroText) == "") then {

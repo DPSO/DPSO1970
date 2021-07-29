@@ -17,7 +17,7 @@ if (not _A3ServerLogsEnabled) exitwith {};
 // Client Called Logs
 if (hasinterface) then {
 	_log = format ["%1 attended as %2.",name player, roleDescription player ];
-	[_log,"DPSO_CONNECTLOG"] remoteExecCall ["A3Log", 2];
+	[_log,"dpso_CONNECTLOG"] remoteExecCall ["A3Log", 2];
 };
 
 // Server Called Logs
@@ -35,12 +35,12 @@ if (isserver) then {
 
       			// Logging
   				_log = format ["--- %1 --- is Unconscious. (Total: %2)", name _player, _deathCount];
-				[_log,"DPSO_DEATHLOG"] call A3Log;
+				[_log,"dpso_DEATHLOG"] call A3Log;
 			};
 		}
 	] call CBA_fnc_addEventHandler;
 
 	_log = format ["********************* %1 *********************",briefingName];
-	[_log,"DPSO_CONNECTLOG"] remoteExecCall ["A3Log", 2];
-	[_log,"DPSO_DEATHLOG"] remoteExecCall ["A3Log", 2];
+	[_log,"dpso_CONNECTLOG"] remoteExecCall ["A3Log", 2];
+	[_log,"dpso_DEATHLOG"] remoteExecCall ["A3Log", 2];
 };

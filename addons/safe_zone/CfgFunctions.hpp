@@ -1,6 +1,6 @@
-class DPSO_SafeZone {
+class dpso_SafeZone {
 
-	tag = "DPSO";
+	tag = "dpso";
 	class Module {
 
 		file = "z\dpso\addons\Safe_Zone\Functions";

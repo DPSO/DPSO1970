@@ -1,6 +1,6 @@
-class DPSO_Interaction {
+class dpso_Interaction {
 
-	tag = "DPSO";
+	tag = "dpso";
 	class Interaction {
 
 		file = "z\dpso\addons\Interaction\Functions";

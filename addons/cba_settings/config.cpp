@@ -10,6 +10,6 @@ class CfgPatches {
         author = AUTHOR;
         authors[] = {"commy2"};
         url = URL;
-        VERSION_CONFIG;
+        version = VERSION;
     };
 };

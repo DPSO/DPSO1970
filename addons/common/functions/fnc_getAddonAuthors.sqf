@@ -12,7 +12,7 @@
  *	<ARRAY>
  *	
  *	Example:
- *	["DPSO_core"] call dpso_fnc_getAddonAuthors;
+ *	["dpso_core"] call dpso_fnc_getAddonAuthors;
  *	
  */
 

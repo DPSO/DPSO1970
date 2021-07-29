@@ -12,15 +12,15 @@ if (!isserver) exitwith {};
 				_x;
 			};
 
-			[_Group, "DPSO Default"] remoteExec ["DPSO_fnc_SetUnitSkill",2];
+			[_Group, "dpso Default"] remoteExec ["dpso_fnc_SetUnitSkill",2];
 			[_Group, true] remoteExec ["enableDynamicSimulation",2];
 		};
 
 		if (_class isKindOf "AllVehicles") exitWith {
 			{
-				[_x, "DPSO Default"] remoteExec ["DPSO_fnc_SetUnitSkill",2];
+				[_x, "dpso Default"] remoteExec ["dpso_fnc_SetUnitSkill",2];
 			} forEach crew _x;
-			[group _x , true] remoteExec ["enableDynamicSimulation",2];
+			[group _x , true] remoteExec ["enableDynamicSimulation",2];	
 		};
 	};
 } foreach Allunits;

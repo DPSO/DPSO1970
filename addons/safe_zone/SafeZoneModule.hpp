@@ -1,10 +1,10 @@
-class DPSO_ModuleSafeZone: Module_F
+class dpso_ModulesafeZone: Module_F
 {
 	scope = 2;
 	displayName = "Safe Zone";
 	icon = "\z\dpso\addons\media\images\icons\Safe_Zone.paa";
-	category = QUOTE(PREFIX);
-	function = "DPSO_fnc_moduleSafeZone";
+	category = "dpso_Modules";
+	function = "dpso_fnc_moduleSafeZone";
 	functionPriority = 4;
 	isGlobal = 0;
 	isTriggerActivated = 0;
@@ -14,7 +14,7 @@ class DPSO_ModuleSafeZone: Module_F
 	{
 		class SafeZoneEnable: Checkbox
   			{
-				property = "DPSO_SafeZoneEnable";
+				property = "LR_SafeZoneEnable";
 				displayName = "Enabled";
 				tooltip = "Enable/Disable this Safe Zone Module.";
 				typeName = "BOOL";
@@ -22,7 +22,7 @@ class DPSO_ModuleSafeZone: Module_F
 			};
 			class SafeZoneSize: Edit
   			{
-				property = "DPSO_SafeZoneSize";
+				property = "LR_SafeZoneSize";
 				displayName = "Size";
 				tooltip = "Area of Safe Zone around this module in meters";
 				typeName = "NUMBER";
@@ -30,7 +30,7 @@ class DPSO_ModuleSafeZone: Module_F
 			};
 		class SafeZoneDuration: Edit
   			{
-				property = "DPSO_SafeZoneDuration";
+				property = "LR_SafeZoneDuration";
 				displayName = "Duration";
 				tooltip = "How long should the safe zone be active. 0 means permanent.";
 				typeName = "NUMBER";

@@ -1,2 +1,0 @@
-PREP(addButton);
-PREP(initDebugConsole);

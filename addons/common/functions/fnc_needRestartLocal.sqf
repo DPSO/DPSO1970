@@ -13,7 +13,7 @@
  *	nothing
  *	
  *	Example:
- *	["DPSO_debug_enabled", 2] call dpso_fnc_needRestartLocal;
+ *	["dpso_debug_enabled", 2] call dpso_fnc_needRestartLocal;
  *	
  */
 

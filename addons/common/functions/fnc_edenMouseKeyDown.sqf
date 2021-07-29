@@ -1,6 +1,6 @@
 #include "\z\dpso\addons\common\script_component.hpp"
 /*
- * Name: DPSO_common_fnc_mouseKeyDown
+ * Name: dpso_common_fnc_mouseKeyDown
  * Author: Nick
  *
  * Arguments:

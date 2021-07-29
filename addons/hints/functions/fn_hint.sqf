@@ -16,7 +16,7 @@
  *	nothing
  *	
  *	Example:
- *	[ format [hint_tpl_default, "Hello World"] ] call DPSO_fnc_hint;
+ *	[ format [hint_tpl_default, "Hello World"] ] call dpso_fnc_hint;
  *	
  */
 
@@ -83,7 +83,7 @@ if (_text isEqualTo "") exitWith {};
 	disableSerialization;
 	
 	//_display = findDisplay 46;
-	_display = uiNamespace getVariable "DPSO_ctrlHint";
+	_display = uiNamespace getVariable "dpso_ctrlHint";
 	
 	_bwidth = 0.003 * safezoneW;
 	_spacer = 1.5 * (0.01 * safezoneH);

@@ -18,7 +18,7 @@ switch _mode do {
 
 		_ctrlNotepadIn ctrlEnable true;
 
-		_notepadContents = uiNamespace getVariable ["DPSO_Notepad_Content", ""];
+		_notepadContents = uiNamespace getVariable ["dpso_Notepad_Content", ""];
 
 		_ctrlNotepadIn ctrlSetText _notepadContents;
 	};
@@ -29,6 +29,6 @@ switch _mode do {
 		_notepadContents = ctrlText _ctrlNotepadIn;
 
 		// Save the contents of the notepad to the missionNamespace
-		missionNamespace setVariable ["DPSO_Notepad_Content", _notepadContents];
+		missionNamespace setVariable ["dpso_Notepad_Content", _notepadContents];
 	};
 };

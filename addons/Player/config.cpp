@@ -2,10 +2,10 @@
 
 class CfgPatches
 {
-	class DPSO_Player
+	class dpso_Player
 	{
 		author = AUTHOR;
-        name = COMPONENT_NAME;
+		name = NAME;
 		url = URL;
 		units[] = {};
 		requiredVersion = REQUIRED_VERSION;
@@ -19,6 +19,6 @@ class CfgPatches
 #include "Cfg3DEN.hpp"
 
 class CfgFunctions {
+
     #include "cfgFunctions.hpp"
 };
-

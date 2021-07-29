@@ -9,18 +9,18 @@
 
 if (GVAR(skipMissionInit)) exitWith {};
 
-private _lastState = DPSO_unit call EFUNC(loadout,checkSavedUnitState);
+private _lastState = dpso_unit call EFUNC(loadout,checkSavedUnitState);
 if !(count _lastState == 0) exitWith {};
 
-if ( vehicle DPSO_unit == DPSO_unit ) then {
+if ( vehicle dpso_unit == dpso_unit ) then {
     if (mod_ACE3) then {
-        [DPSO_unit, currentWeapon DPSO_unit, currentMuzzle DPSO_unit] call ACE_SafeMode_fnc_lockSafety;
+        [dpso_unit, currentWeapon dpso_unit, currentMuzzle dpso_unit] call ACE_SafeMode_fnc_lockSafety;
     };
-    if ( primaryWeapon DPSO_unit != "" ) then {
-        DPSO_unit playMove "AmovPercMstpSlowWrflDnon";
+    if ( primaryWeapon dpso_unit != "" ) then {
+        dpso_unit playMove "AmovPercMstpSlowWrflDnon";
     } else {
-        if ( handgunWeapon DPSO_unit != "" ) then {
-            DPSO_unit playMove "AmovPercMstpSrasWpstDnon_AmovPercMstpSrasWlnrDnon";
+        if ( handgunWeapon dpso_unit != "" ) then {
+            dpso_unit playMove "AmovPercMstpSrasWpstDnon_AmovPercMstpSrasWlnrDnon";
         };
     };
 };

@@ -1,5 +1,5 @@
 /*
-Function: DPSO_fnc_SpawnExplosives
+Function: dpso_fnc_SpawnExplosives
 
 Description:
 	Utility function for spawning explosions and secondaries on objects,

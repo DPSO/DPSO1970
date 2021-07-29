@@ -12,7 +12,7 @@
  *	nothing
  *	
  *	Example:
- *	[] call DPSO_hints_fnc_cleanup;
+ *	[] call dpso_hints_fnc_cleanup;
  *	
  */
 

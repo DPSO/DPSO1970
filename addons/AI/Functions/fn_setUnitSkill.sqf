@@ -1,5 +1,5 @@
 /*
-Function: DPSO_fnc_SetUnitSkill
+Function: dpso_fnc_SetUnitSkill
 
 Description:
 	Set the given unit's skill level to the desired one.
@@ -45,17 +45,17 @@ private _skillv = [
     (0.20 + random 0.40)
 ];
 
-if !(isNil "DPSO_AI_AimingAccuracy") then {
+if !(isNil "dpso_AI_AimingAccuracy") then {
     _skillv = [
-        (DPSO_AI_AimingAccuracy + random 0.20),
-        (DPSO_AI_AimingShake + random 0.20),
-        (DPSO_AI_AimingSpeed + random 0.20),
-        (DPSO_AI_Commanding),
-        (DPSO_AI_Courage), 1,
-        (DPSO_AI_General),
-        (DPSO_AI_ReloadSpeed + random 0.50),
-        (DPSO_AI_SpotDistance + random 0.30),
-        (DPSO_AI_SpotTime + random 0.40)
+        (dpso_AI_AimingAccuracy + random 0.20),
+        (dpso_AI_AimingShake + random 0.20),
+        (dpso_AI_AimingSpeed + random 0.20),
+        (dpso_AI_Commanding),
+        (dpso_AI_Courage), 1,
+        (dpso_AI_General),
+        (dpso_AI_ReloadSpeed + random 0.50),
+        (dpso_AI_SpotDistance + random 0.30),
+        (dpso_AI_SpotTime + random 0.40)
     ];
 };
 

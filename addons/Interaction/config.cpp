@@ -2,7 +2,7 @@
 
 class CfgPatches
 {
-	class DPSO_Interaction
+	class dpso_Interaction
 	{
 		author = AUTHOR;
 		name = NAME;
@@ -21,7 +21,7 @@ class CfgFunctions {
 };
 
 class Extended_PreInit_EventHandlers {
-    class DPSOFundamentals_Interaction_Event {
+    class dpsoFundamentals_Interaction_Event {
         init = "call compile preprocessFileLineNumbers 'z\dpso\addons\Interaction\XEH_preInit.sqf'";
     };
 };

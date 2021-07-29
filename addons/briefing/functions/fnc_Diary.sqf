@@ -56,12 +56,12 @@ player createDiaryRecord ["Diary", ["Short Range Frequencies",
 "
 ]];
 
-_PlayerGroup =  group player getVariable ["DPSO_section","null"];
+_PlayerGroup =  group player getVariable ["dpso_section","null"];
 if !(_PlayerGroup == "ds990") exitwith {};
 
-player createDiarySubject ["DPSO Commands","DPSO Commands"];
+player createDiarySubject ["dpso Commands","dpso Commands"];
 
-player createDiaryRecord ["DPSO Commands", ["TFAR",
+player createDiaryRecord ["dpso Commands", ["TFAR",
 "
 <br/><font face='PuristaLight' color='#40FFFF' font size='20'>Sending Distance Multiplicator</font>
 <br/>
@@ -89,7 +89,7 @@ player createDiaryRecord ["DPSO Commands", ["TFAR",
 ]];
 
 
-player createDiaryRecord ["DPSO Commands", ["Side Chat",
+player createDiaryRecord ["dpso Commands", ["Side Chat",
 "
 <br/><font face='PuristaLight' color='#40FFFF' font size='20'>Side Chat Duration</font>
 <br/>
@@ -104,7 +104,7 @@ player createDiaryRecord ["DPSO Commands", ["Side Chat",
 "
 ]];
 
-player createDiaryRecord ["DPSO Commands", ["Safe Zone",
+player createDiaryRecord ["dpso Commands", ["Safe Zone",
 "
 <br/><font face='PuristaLight' color='#40FFFF' font size='20'>Safe Zone Enabled</font>
 <br/>
@@ -143,11 +143,11 @@ player createDiaryRecord ["DPSO Commands", ["Safe Zone",
 "
 ]];
 
-player createDiaryRecord ["DPSO Commands", ["Introduction",
+player createDiaryRecord ["dpso Commands", ["Introduction",
 "
-<br/><font face='PuristaLight' color='#40FFFF' font size='20'>DPSO Commands</font>
+<br/><font face='PuristaLight' color='#40FFFF' font size='20'DPSO Commands</font>
 <br/>
-<br/><font face='PuristaLight' color='#6C8EBF'>Welcome to the DPSO Commands Area. In this Section I'll explain how the system works.
+<br/><font face='PuristaLight' color='#6C8EBF'>Welcome to the dpso Commands Area. In this Section I'll explain how the system works.
 
 <br/>First off, for these commands to work you need to be set as a mission creator.
 <br/>The commands need to be entered to the chat (like admin commands on EU1), they start with an exclamation mark (!).

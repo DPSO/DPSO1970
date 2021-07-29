@@ -15,41 +15,41 @@ class RscText;
 
 class cfgScriptPaths 
 {
-    DPSO_briefing = "z\dpso\addons\briefing\ui_scripts\"; //" - Escape for VS code linter
+    dpso_briefing = "z\dpso\addons\briefing\ui_scripts\"; //" - Escape for VS code linter
 };
 
 class Cfg3DEN
 {
     class Mission
     {
-        class DPSO_MissionBriefingAttributes // Custom section class, everything inside will be opened in one window (MySection)
+        class dpso_MissionBriefingAttributes // Custom section class, everything inside will be opened in one window (MySection)
         {
-            displayName = "DPSO Briefing settings"; // Text visible in the window title as "Edit <displayName>"
+            displayName = "dpso Briefing settings"; // Text visible in the window title as "Edit <displayName>"
             //display = "Display3DENEditAttributesPreview"; // Optional - display for attributes window. Must have the same structure and IDCs as the default Display3DENEditAttributes
             class AttributeCategories
             {
-                class DPSO_BriefingSettings
+                class dpso_BriefingSettings
                 {
-                    displayName = "DPSO: Briefing settings"; // Category name visible in Edit Attributes window
+                    displayName = "dpso: Briefing settings"; // Category name visible in Edit Attributes window
                     collapsed = 0; // When 1, the category is collapsed by default
                     class Attributes
                     {
-                        class DPSO_Briefing_Loadout
+                        class dpso_Briefing_Loadout
                         {
-                            property = "DPSO_Briefing_Loadout";
+                            property = "dpso_Briefing_Loadout";
                             displayName = "Create loadout page";
                             tooltip = "Create briefing section that contains a list of all equipment of everyone in the players group and theirself.";
                             control = "Checkbox";
-                            //expression = "missionNamespace setVariable ['DPSO_Briefing_Loadout',_value];";
+                            //expression = "missionNamespace setVariable ['dpso_Briefing_Loadout',_value];";
                             defaultValue = "false";
                             condition = "1";
                         };
-                        class DPSO_Briefing
+                        class dpso_Briefing
                         {
-                            property = "DPSO_Briefing";
+                            property = "dpso_Briefing";
                             displayName = "";
                             control = "BriefingSettings";
-                            //expression = "missionNamespace setVariable ['DPSO_BriefingArray',_value];";
+                            //expression = "missionNamespace setVariable ['dpso_BriefingArray',_value];";
                             //tooltip = "How much should terrain affect radio signal strength? (0 disables)";
                             defaultValue = "[]";
                             condition = "1";
@@ -65,17 +65,17 @@ class Cfg3DEN
         class AttributeCategories
         {
             // Category class, can be anything
-            class DPSOMarker
+            class dpsoMarker
             {
                 class Attributes
                 {
-                    class DPSO_Briefinglist
+                    class dpso_Briefinglist
                     {
                         displayName = ""; // Name assigned to UI control class Title
                         tooltip = ""; // Tooltip assigned to UI control class Title
-                        property = "DPSO_Briefinglist"; // Unique config property name saved in SQM
+                        property = "dpso_Briefinglist"; // Unique config property name saved in SQM
                         control = "None"; // UI control base class displayed in Edit Attributes window, points to Cfg3DEN >> Attributes
-                        expression =  "[_this,'DPSO_Briefinglist',_value] call dpso_common_fnc_initGroupVar;";// "_this setVariable ['DPSO_Briefinglist',_value],true;";
+                        expression =  "[_this,'dpso_Briefinglist',_value] call dpso_common_fnc_initGroupVar;";// "_this setVariable ['dpso_Briefinglist',_value],true;";
                         defaultValue = "[]";
                         wikiType = "[[String]]";
                     };
@@ -91,17 +91,17 @@ class Cfg3DEN
         class AttributeCategories
         {
             // Category class, can be anything
-            class DPSOMarker
+            class dpsoMarker
             {
                 class Attributes
                 {
-                    class DPSO_Briefinglist
+                    class dpso_Briefinglist
                     {
                         displayName = "Briefing"; // Name assigned to UI control class Title
                         tooltip = ""; // Tooltip assigned to UI control class Title
-                        property = "DPSO_Briefinglist"; // Unique config property name saved in SQM
+                        property = "dpso_Briefinglist"; // Unique config property name saved in SQM
                         control = "None"; // UI control base class displayed in Edit Attributes window, points to Cfg3DEN >> Attributes
-                        expression = "_this setVariable ['DPSO_Briefinglist',_value,true];";
+                        expression = "_this setVariable ['dpso_Briefinglist',_value,true];";
                         defaultValue = "[]";
                         wikiType = "[[String]]";
                         condition = "objectBrain"; // Condition for attribute to appear (see the table below)
@@ -117,17 +117,17 @@ class Cfg3DEN
         class AttributeCategories
         {
             // Category class, can be anything
-            class DPSOMarker
+            class dpsoMarker
             {
                 class Attributes
                 {
-                    class DPSO_Briefinglist
+                    class dpso_Briefinglist
                     {
                         displayName = ""; // Name assigned to UI control class Title
                         tooltip = ""; // Tooltip assigned to UI control class Title
-                        property = "DPSO_Briefinglist"; // Unique config property name saved in SQM
+                        property = "dpso_Briefinglist"; // Unique config property name saved in SQM
                         control = "None"; // UI control base class displayed in Edit Attributes window, points to Cfg3DEN >> Attributes
-                        expression = "_this setVariable ['DPSO_Briefinglist',_value,true];";
+                        expression = "_this setVariable ['dpso_Briefinglist',_value,true];";
                         defaultValue = "[]";
                         wikiType = "[[String]]";
                         condition = "objectControllable"; // Condition for attribute to appear (see the table below)
@@ -146,9 +146,9 @@ class Cfg3DEN
         class BriefingSettings : Toolbox
         {
             scriptName = "BriefingSettings";
-            scriptPath = "DPSO_briefing";
-            onLoad = "['onLoad',_this,'BriefingSettings','DPSO_briefing',false] call (uinamespace getvariable 'BIS_fnc_initDisplay');"; // 3rd param is the path PATH\scriptName.sqf
-            onUnload = "['onUnload',_this,'BriefingSettings','DPSO_briefing',false] call (uinamespace getvariable 'BIS_fnc_initDisplay');";
+            scriptPath = "dpso_briefing";
+            onLoad = "['onLoad',_this,'BriefingSettings','dpso_briefing',false] call (uinamespace getvariable 'BIS_fnc_initDisplay');"; // 3rd param is the path PATH\scriptName.sqf
+            onUnload = "['onUnload',_this,'BriefingSettings','dpso_briefing',false] call (uinamespace getvariable 'BIS_fnc_initDisplay');";
 
             attributeLoad = "['attributeLoad',_this] call (uinamespace getvariable 'BriefingSettings_script');";
             attributeSave = "['attributeSave',_this] call (uinamespace getvariable 'BriefingSettings_script');";

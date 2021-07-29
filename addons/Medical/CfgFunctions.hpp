@@ -1,9 +1,9 @@
-class DPSO_Medical {
+class dpso_Medical {
 
-	tag = "DPSO";
+	tag = "dpso";
 	class Medical {
 
-		file = "z\dpso\addons\medical\Functions";
+		file = "z\dpso\addons\Medical\Functions";
 		class ModuleMedicalFacility {};
 		class setMedicalFacility {};
 		class FacilityHeal {};

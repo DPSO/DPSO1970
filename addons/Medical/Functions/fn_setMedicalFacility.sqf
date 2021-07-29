@@ -1,5 +1,5 @@
 /*
-Function: DPSO_fnc_setMedicalFacility
+Function: dpso_fnc_setMedicalFacility
 
 Description:
 	Turns the given object or trigger into a medical facility.
@@ -35,7 +35,7 @@ _object setTriggerActivation ["ANYPLAYER", "PRESENT", true];
 _object setTriggerStatements [
     "player in thisList",
     "
-    [player] call DPSO_fnc_FacilityHeal;
+    [player] call dpso_fnc_FacilityHeal;
     ",
     ""
 ];

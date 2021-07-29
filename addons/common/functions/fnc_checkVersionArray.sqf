@@ -1,6 +1,6 @@
 #include "\z\dpso\addons\common\script_component.hpp"
 /*
- * Name: DPSO_common_fnc_checkVersionArray
+ * Name: dpso_common_fnc_checkVersionArray
  * Author: Snippers
  *
  * Arguments:

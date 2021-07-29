@@ -1,8 +1,8 @@
 class CfgRespawnTemplates
 {
-	class DPSO_RespawnForWarlords
+	class dpso_RespawnForWarlords
 	{
-		displayName = "DPSO Respawn for Warlords";
+		displayName = "dpso Respawn for Warlords";
 		onPlayerRespawn = "z\dpso\addons\Warlords\Scripts\RespawnForWarlords.sqf";
 		respawnOnStart = 1;
 		respawn = "BASE";

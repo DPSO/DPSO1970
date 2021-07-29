@@ -7,11 +7,11 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"DPSO_main"};
+        requiredAddons[] = {"dpso_main"};
         author = "Potato";
         authors[] = {"PabstMirror"};
         authorUrl = "https://github.com/BourbonWarfare/POTATO";
-        VERSION_CONFIG;
+        version = VERSION;
     };
 };
 

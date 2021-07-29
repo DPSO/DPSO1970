@@ -4,9 +4,9 @@ class RscDisplayCueCard
 	enableSimulation = 1;
 	closeOnMissionEnd = 0;
 	scriptName = "RscDisplayCueCard";
-	scriptPath = "DPSODisplays";
-	onLoad = "[""onLoad"",_this,""RscDisplayCueCard"",'DPSODisplays'] call 	(uinamespace getvariable 'BIS_fnc_initDisplay')";
-	onUnload = "[""onUnload"",_this,""RscDisplayCueCard"",'DPSODisplays'] call 	(uinamespace getvariable 'BIS_fnc_initDisplay')";
+	scriptPath = "dpsoDisplays";
+	onLoad = "[""onLoad"",_this,""RscDisplayCueCard"",'dpsoDisplays'] call 	(uinamespace getvariable 'BIS_fnc_initDisplay')";
+	onUnload = "[""onUnload"",_this,""RscDisplayCueCard"",'dpsoDisplays'] call 	(uinamespace getvariable 'BIS_fnc_initDisplay')";
 	movingEnable = true;
 
 	class Controls
@@ -92,7 +92,7 @@ class RscDisplayCueCard
         class NotePadBackground: RscPicture
         {
             idc = 1200;
-            text = "z\dpso\addons\media\images\cuecards\notepad_CA.paa";
+            text = "z\dpso\addons\Media\images\cuecards\notepad_CA.paa";
             x = 0.288594 * safezoneW + safezoneX;
             y = 0.093 * safezoneH + safezoneY;
             w = 0.31 * safezoneW;

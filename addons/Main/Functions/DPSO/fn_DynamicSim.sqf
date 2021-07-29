@@ -1,5 +1,5 @@
 /*
-Function: DPSO_fnc_DynamicSim
+Function: dpso_fnc_DynamicSim
 
 Description:
     Globally enables or disables dynamic simulation and sets proper parameters.

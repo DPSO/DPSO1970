@@ -28,22 +28,22 @@ class Cfg3DEN {
     };
     class Object {
         class AttributeCategories {
-            class PREFIX {
-                displayName = "DPSO Fundamentals";
+            class dpso_attributes {
+                displayName = "dpso_1970s";
                 collapsed = 1;
                 class Attributes {
-                    class DPSO_Group_Preset {
-                        property = QUOTE(DPSO_Group_Preset);
+                    class dpso_Group_Preset {
+                        property = QUOTE(dpso_Group_Preset);
                         control = GroupSelect;
-                        displayName = "DPSO Preset Group:";
-                        tooltip = "Default Preset for Patches & Radio Frequencies.";
-                        expression = "[_this, _value] call DPSO_fnc_ConfigPlayer;";
+                        displayName = "dpso Preset Group:";
+                        tooltip = "Default Preset for Patches & TFAR Radio Frequencies.";
+                        expression = "[_this, _value] call dpso_fnc_ConfigPlayer;";
                         typeName = "STRING";
                         condition = "objectBrain";
                         defaultValue = "-1";
                     };
-                    class DPSO_Pilot {
-                        property = QUOTE(DPSO_Pilot);
+                    class dpso_Pilot {
+                        property = QUOTE(dpso_Pilot);
                         control = "Checkbox";
                         displayName = "Pilot";
                         tooltip = "Set the player to Pilot to allow them in the Pilot seat of aircraft.";
@@ -52,8 +52,8 @@ class Cfg3DEN {
                         condition = "objectBrain";
                         defaultValue = "(false)";
                     };
-                    class DPSO_Mission_Maker {
-                        property = QUOTE(DPSO_Mission_Maker);
+                    class dpso_Mission_Maker {
+                        property = QUOTE(dpso_Mission_Maker);
                         control = "Checkbox";
                         displayName = "Mission Maker";
                         tooltip = "Define this player as Mission Maker to allow access to further mission controls.";
@@ -62,8 +62,8 @@ class Cfg3DEN {
                         condition = "objectBrain";
                         defaultValue = "(false)";
                     };
-                    class DPSO_Instructor {
-                        property = QUOTE(DPSO_Instructor);
+                    class dpso_Instructor {
+                        property = QUOTE(dpso_Instructor);
                         control = "Checkbox";
                         displayName = "Instructor";
                         tooltip = "Define this player as Instructor to allow access to any valid Instructor Controls - Only used with Training Functions.";
@@ -72,12 +72,12 @@ class Cfg3DEN {
                         condition = "objectBrain";
                         defaultValue = "(false)";
                     };
-                         class DPSO_DefaultLoadout {
-                        property = QUOTE(DPSO_DefaultLoadout);
+                         class dpso_DefaultLoadout {
+                        property = QUOTE(dpso_DefaultLoadout);
                         control = "Checkbox";
-                        displayName = "DPSO Preset Loadout";
+                        displayName = "dpso Preset Loadout";
                         tooltip = "Use Preset Loadout for this player type if available.";
-                        expression = "if (_value IsEqualTo true) then { [_this] call DPSO_fnc_Loadouts;}";
+                        expression = "if (_value IsEqualTo true) then { [_this] call dpso_fnc_Loadouts;}";
                         typeName = "BOOL";
                         condition = "objectBrain";
                         defaultValue = "(false)";

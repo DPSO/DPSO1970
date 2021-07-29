@@ -1,5 +1,5 @@
 /*
- * Name: DPSO_common_fnc_sideToString
+ * Name: dpso_common_fnc_sideToString
  * Author: Snippers
  *
  * Arguments:

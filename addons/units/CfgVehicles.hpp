@@ -14,7 +14,7 @@ class CfgVehicles {
     class vn_b_men_sog_base_OCimport_01 : vn_b_men_sog_base { scope = 0; class EventHandlers; };
     class vn_b_men_sog_base_OCimport_02 : vn_b_men_sog_base_OCimport_01 { class EventHandlers; };
 
-    class CLASS(Unit_Combat_DPSO_Base): vn_b_men_sog_base_OCimport_02 {
+    class CLASS(Unit_Combat_dpso_Base): vn_b_men_sog_base_OCimport_02 {
         author = AUTHOR;
         scope = 2;
         scopeCurator = 2;
@@ -26,8 +26,8 @@ class CfgVehicles {
         respawnWeapons[] = {"VN_XM177", "VN_M1911", "Throw", "Put"};
         magazines[] = {ITEMS_8(VN_M16_20_T_MAG), ITEMS_2(VN_M61_GRENADE_MAG), ITEMS_2(Chemlight_green), ITEMS_2(VN_M1911_MAG)};
         respawnMagazines[] = {ITEMS_8(VN_M16_20_T_MAG), ITEMS_2(VN_M61_GRENADE_MAG), ITEMS_2(Chemlight_green), ITEMS_2(VN_M1911_MAG)};
-        items[] = {"ACE_EarPlugs", "ACE_MapTools", "DPSO_FirstAid", "ACE_Flashlight_MX991"};
-        respawnItems[] = {"ACE_EarPlugs", "ACE_MapTools", "DPSO_FirstAid", "ACE_Flashlight_MX991"}; 
+        items[] = {ITEMS_4(vn_b_item_firstaidkit)};
+        respawnItems[] = {ITEMS_4(vn_b_item_firstaidkit)}; 
         linkedItems[] = {"VN_B_VEST_USARMY_01", "VN_B_BOONIE_02_06", "", "VN_B_ITEM_MAP", "VN_B_ITEM_COMPASS_SOG", "VN_B_ITEM_WATCH", "VN_B_ITEM_RADIO_URC10", "", "", "", "", "", "", "", ""};
         respawnLinkedItems[] = {"VN_B_VEST_USARMY_01", "VN_B_BOONIE_02_06", "", "VN_B_ITEM_MAP", "VN_B_ITEM_COMPASS_SOG", "VN_B_ITEM_WATCH", "VN_B_ITEM_RADIO_URC10", "", "", "", "", "", "", "", ""};
 
@@ -36,7 +36,7 @@ class CfgVehicles {
         };
     };
 
-    class CLASS(Unit_Combat_DPSO_Pilot): vn_b_men_sog_base_OCimport_02 {
+    class CLASS(Unit_Combat_dpso_Pilot): vn_b_men_sog_base_OCimport_02 {
         author = AUTHOR;
         scope = 2;
         scopeCurator = 2;
@@ -48,8 +48,8 @@ class CfgVehicles {
         respawnWeapons[] = {"VN_XM177", "VN_M1911", "Throw", "Put"};
         magazines[] = {ITEMS_8(VN_M16_20_T_MAG), ITEMS_2(VN_M61_GRENADE_MAG), ITEMS_2(Chemlight_green), ITEMS_2(VN_M1911_MAG)};
         respawnMagazines[] = {ITEMS_8(VN_M16_20_T_MAG), ITEMS_2(VN_M61_GRENADE_MAG), ITEMS_2(Chemlight_green), ITEMS_2(VN_M1911_MAG)};
-        items[] = {"ACE_EarPlugs", "ACE_MapTools", "DPSO_FirstAid", "ACE_Flashlight_MX991"};
-        respawnItems[] = {"ACE_EarPlugs", "ACE_MapTools", "DPSO_FirstAid", "ACE_Flashlight_MX991"}; 
+        items[] = {ITEMS_4(vn_b_item_firstaidkit)};
+        respawnItems[] = {ITEMS_4(vn_b_item_firstaidkit)}; 
         linkedItems[] = {"VN_B_VEST_USARMY_01", "VN_B_BOONIE_02_06", "", "VN_B_ITEM_MAP", "VN_B_ITEM_COMPASS_SOG", "VN_B_ITEM_WATCH", "VN_B_ITEM_RADIO_URC10", "", "", "", "", "", "", "", ""};
         respawnLinkedItems[] = {"VN_B_VEST_USARMY_01", "VN_B_BOONIE_02_06", "", "VN_B_ITEM_MAP", "VN_B_ITEM_COMPASS_SOG", "VN_B_ITEM_WATCH", "VN_B_ITEM_RADIO_URC10", "", "", "", "", "", "", "", ""};
 
@@ -58,7 +58,7 @@ class CfgVehicles {
         };
     };
 
-    class CLASS(operator_990) : CLASS(Unit_Combat_DPSO_Base) {
+    class CLASS(operator_990) : CLASS(Unit_Combat_dpso_Base) {
         author = AUTHOR;
         scope = 2;
         displayName = "Operator 990";
@@ -68,7 +68,7 @@ class CfgVehicles {
         };
     };
 
-    class CLASS(operator_991) : CLASS(Unit_Combat_DPSO_Base) {
+    class CLASS(operator_991) : CLASS(Unit_Combat_dpso_Base) {
         author = AUTHOR;
         scope = 2;
         displayName = "Operator 991";
@@ -78,7 +78,7 @@ class CfgVehicles {
         };
     };
 
-    class CLASS(operator_992) : CLASS(Unit_Combat_DPSO_Base) {
+    class CLASS(operator_992) : CLASS(Unit_Combat_dpso_Base) {
         author = AUTHOR;
         scope = 2;
         displayName = "Operator 992";
@@ -88,7 +88,7 @@ class CfgVehicles {
         };
     };
 
-    class CLASS(operator_993) : CLASS(Unit_Combat_DPSO_Base) {
+    class CLASS(operator_993) : CLASS(Unit_Combat_dpso_Base) {
         author = AUTHOR;
         scope = 2;
         displayName = "Operator 993";
@@ -98,7 +98,7 @@ class CfgVehicles {
         };
     };
 
-    class CLASS(operator_995) : CLASS(Unit_Combat_DPSO_Base) {
+    class CLASS(operator_995) : CLASS(Unit_Combat_dpso_Base) {
         author = AUTHOR;
         scope = 2;
         displayName = "Operator 995";
@@ -108,7 +108,7 @@ class CfgVehicles {
         };
     };
 
-    class CLASS(flight_crew_999) : CLASS(Unit_Combat_DPSO_Pilot) {
+    class CLASS(flight_crew_999) : CLASS(Unit_Combat_dpso_Pilot) {
         author = AUTHOR;
         scope = 2;
         displayName = "Pilot 999";

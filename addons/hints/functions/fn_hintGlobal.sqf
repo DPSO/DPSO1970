@@ -16,7 +16,7 @@
  *	nothing
  *	
  *	Example:
- *	[ format [hint_tpl_default, "Hello World"] ] call DPSO_fnc_hintGlobal;
+ *	[ format [hint_tpl_default, "Hello World"] ] call dpso_fnc_hintGlobal;
  *	
  */
 

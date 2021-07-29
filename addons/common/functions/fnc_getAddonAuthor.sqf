@@ -12,7 +12,7 @@
  *	<STRING>
  *	
  *	Example:
- *	["DPSO_core"] call dpso_fnc_getAddonAuthor;
+ *	["dpso_core"] call dpso_fnc_getAddonAuthor;
  *	
  */
 

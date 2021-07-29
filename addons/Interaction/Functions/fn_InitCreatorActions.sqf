@@ -1,7 +1,7 @@
 // not documented: postInit
 if !(hasInterface && (isClass (configFile >> "CfgPatches" >> "ace_main"))) exitWith {};
 
-DPSO_ActionIDs = [];
+dpso_ActionIDs = [];
 
 _action = [
 	"CreatorActions",
@@ -14,13 +14,13 @@ _action = [
 [player, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToObject;
 [["ACE_ZeusActions"], _action] call ACE_interact_menu_fnc_addActionToZeus;
 
-["DPSO_RegisterCreatorAction", {
+["dpso_RegisterCreatorAction", {
 	params ["_action", "_actionPath", "_actionName"];
 
-	if (_actionName in DPSO_ActionIDs) exitWith {};
+	if (_actionName in dpso_ActionIDs) exitWith {};
 
 	[player, 1, ["ACE_SelfActions", "CreatorActions"] + _actionPath, _action] call ace_interact_menu_fnc_addActionToObject;
 	[["ACE_ZeusActions", "CreatorActions"] + _actionPath, _action] call ACE_interact_menu_fnc_addActionToZeus;
 
-	DPSO_ActionIDs pushBack _actionName;
+	dpso_ActionIDs pushBack _actionName;
 }] call CBA_fnc_addEventHandler;

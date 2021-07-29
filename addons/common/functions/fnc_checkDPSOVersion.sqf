@@ -1,6 +1,6 @@
 #include "\z\dpso\addons\common\script_component.hpp"
 /*
- * Name: DPSO_common_fnc_checkDPSOVersion
+ * Name: dpso_common_fnc_checkdpsoVersion
  * Author: Snippers
  *
  * Arguments:
@@ -10,7 +10,7 @@
  * Boolean
  *
  * Description:
- * Checks if DPSO Mission version is larger than the input version;
+ * Checks if dpso Mission version is larger than the input version;
  */
 
 params [

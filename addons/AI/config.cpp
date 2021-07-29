@@ -1,24 +1,25 @@
 #include "script_component.hpp"
 
-class cfgPatches
+class CfgPatches
 {
-    class ADDON
-    {
-        name = COMPONENT_NAME;
-        author = "Nick";
-        url = URL;
-        units[] = {};
-        weapons[] = {};
-        requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"DPSO_common"};
-        VERSION_CONFIG;
-    };
+	class dpso_AI
+	{
+		author = AUTHOR;
+		name = NAME;
+		url = URL;
+		units[] = {};
+		requiredVersion = REQUIRED_VERSION;
+		requiredAddons[] = {
+			"cba_main",
+			"cba_xeh"
+		};
+		version = VERSION;
+		authors[] = {"MitchJC", "YonV"};
+		weapons[] = {};
+	};
 };
 
-#include "CfgEventHandlers.hpp"
-#include "CfgWaypoints.hpp"
-#include "CfgModules.hpp"
-
+#include "CfgVehicles.hpp"
 
 class CfgFunctions {
 
@@ -27,8 +28,8 @@ class CfgFunctions {
 
 class Extended_PreInit_EventHandlers
 {
-	class DPSO_AI_Event
+	class dpso_AI_Event
 	{
-		init = "call compile preProcessFileLineNumbers 'z\dpso\addons\ai\XEH_preInit.sqf'";
+		init = "call compile preProcessFileLineNumbers 'z\dpso\addons\AI\XEH_preInit.sqf'";
 	};
 };

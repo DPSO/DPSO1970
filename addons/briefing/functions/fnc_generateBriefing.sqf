@@ -13,7 +13,7 @@ if (GVAR(addLoadoutNotes)) then {
 // Create credits page here, so it ends up at the end.
 [] call FUNC(createCreditsPage);
 
-private _briefingArray = getMissionConfigValue ["DPSO_Briefing","[]"];
+private _briefingArray = getMissionConfigValue ["dpso_Briefing","[]"];
 if (_briefingArray isEqualTo "[]") exitWith {};
 if (_briefingArray isEqualType "") then { _briefingArray = call compile _briefingArray;};
 
@@ -31,9 +31,9 @@ private _indexesToTrigger = [];
 } forEach _briefingArray;
 
 //Check group/unit conditions
-private _groupCond = _unitGroup getVariable ["DPSO_Briefinglist", []];
+private _groupCond = _unitGroup getVariable ["dpso_Briefinglist", []];
 if (_groupCond isEqualType "") then { _groupCond = call compile _groupCond; };
-private _unitCond = _unit getVariable ["DPSO_Briefinglist", []];
+private _unitCond = _unit getVariable ["dpso_Briefinglist", []];
 if (_unitCond isEqualType "") then { _unitCond = call compile _unitCond; };
 
 {
@@ -60,7 +60,7 @@ private _fnc_fileExists = {
         [_scriptName] spawn {
             params ["_scriptName"];
             uiSleep 5;
-            systemChat format["[DPSO-Briefing] Missing file: %1 ", _scriptName];
+            systemChat format["[dpso-Briefing] Missing file: %1 ", _scriptName];
         };
     };
 } forEach _indexesToTrigger;
@@ -72,7 +72,7 @@ if ([] call dpso_common_fnc_isAdmin) then {
     } else {
         [] spawn {
             uiSleep 5;
-            systemChat "[DPSO-Briefing] Warning admin briefing not found. Expected: MISSION_ROOT\briefing\admin.sqf";
+            systemChat "[dpso-Briefing] Warning admin briefing not found. Expected: MISSION_ROOT\briefing\admin.sqf";
         };
     };
 };

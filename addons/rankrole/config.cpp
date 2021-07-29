@@ -5,9 +5,7 @@ class CfgPatches
 	class dpso_rankrole
 	{
 		name = COMPONENT_NAME;
-		requiredAddons[] = {
-			"ace_medical_engine"
-		};
+		requiredAddons[] = {};
 		units[] = {};
 		weapons[] = {};
 		author = AUTHOR;
@@ -21,7 +19,7 @@ class CfgPatches
 class CfgFunctions {
 	class dpso_rankrole {
 
-		tag = "DPSO_rankrole";
+		tag = "dpso_rankrole";
 		class RankRole {
 
 			file = "z\dpso\addons\rankrole\Functions";
@@ -34,13 +32,6 @@ class CfgFunctions {
 		};
 	};
 };
-
-
-
-
-
-
-
 
 class Extended_PreInit_EventHandlers {
 	dpsorank = "call compile preprocessFileLineNumbers 'z\dpso\addons\rankrole\XEH_preInit.sqf'";

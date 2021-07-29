@@ -2,7 +2,7 @@
 
 class CfgPatches
 {
-	class DPSOFundamentals_Channels
+	class dpsoFundamentals_Channels
 	{
 		author = AUTHOR;
 		name = NAME;
@@ -17,13 +17,13 @@ class CfgPatches
 };
 
 class Extended_PreInit_EventHandlers {
-    class DPSOFundamentals_Channels_Event {
-        init = "call compile preprocessFileLineNumbers 'z\dpso\addons\Channels\XEH_preInit.sqf'";
+    class dpsoFundamentals_Channels_Event {
+        init = "call compile preprocessFileLineNumbers 'z\dpso\addons\channels\XEH_preInit.sqf'";
     };
 };
 
 class Extended_PostInit_EventHandlers {
-    class DPSO_AI_Event {
-        init = "call compile preprocessFileLineNumbers 'z\dpso\addons\Channels\XEH_postInit.sqf'";
+    class dpso_AI_Event {
+        init = "call compile preprocessFileLineNumbers 'z\dpso\addons\channels\XEH_postInit.sqf'";
     };
 };

@@ -1,5 +1,5 @@
 /*
-Function: DPSO_fnc_Sound3DFromPos
+Function: dpso_fnc_Sound3DFromPos
 
 Description:
 	Plays a sound in 3D Space at a given position on every player.
@@ -25,7 +25,7 @@ Author:
 
 // If run locally, run on server instead
 if (!isServer) exitWith {
-	_this remoteExec ["DPSO_fnc_Sound3DFromPos", 2];
+	_this remoteExec ["dpso_fnc_Sound3DFromPos", 2];
 };
 
 params [

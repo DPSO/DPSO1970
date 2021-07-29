@@ -1,6 +1,6 @@
-class DPSO_Explosives {
+class dpso_Explosives {
 
-	tag = "DPSO";
+	tag = "dpso";
 	class Explosives {
 
 		file = "z\dpso\addons\Explosives\Functions";

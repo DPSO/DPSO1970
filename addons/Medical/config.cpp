@@ -2,7 +2,7 @@
 
 class CfgPatches
 {
-	class DPSO_Medical
+	class dpso_Medical
 	{
 		author = AUTHOR;
 		name = NAME;

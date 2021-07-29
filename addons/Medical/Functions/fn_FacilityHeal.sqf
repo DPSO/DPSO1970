@@ -1,5 +1,5 @@
 /*
-Function: DPSO_fnc_FacilityHeal
+Function: dpso_fnc_FacilityHeal
 
 Description:
 	Helper function to heal players within medical facilities.
@@ -21,20 +21,20 @@ Author:
 params ["_player"];
 
 if !(local _player) exitWith {
-	systemChat "DPSO_fnc_FacilityHeal: player unit needs to be local";
+	systemChat "dpso_fnc_FacilityHeal: player unit needs to be local";
 };
 
 if (_player getVariable ["ACE_isUnconscious", false]) then {
-	[format ["%1<br />is being revived at the DPSO Medical Facility.", profileName], [1,-0.2], "#ed1b2e", 0.4] call DPSO_fnc_dynamicText;
+	[format ["%1<br />is being revived at the dpso Medical Facility.", profileName], [1,-0.2], "#ed1b2e", 0.4] call dpso_fnc_dynamicText;
 };
 
 [
-	"You are being treated at the DPSO Medical Facility",
+	"You are being treated at the dpso Medical Facility",
 	[-1, 0.8],
 	"#FFA500",
 	0.5,
 	false
-] call DPSO_fnc_DynamicText;
+] call dpso_fnc_DynamicText;
 
 [
     {
@@ -45,6 +45,6 @@ if (_player getVariable ["ACE_isUnconscious", false]) then {
             "#228B22",
             0.5,
             false
-        ] call DPSO_fnc_DynamicText;
+        ] call dpso_fnc_DynamicText;
     }, [], 10
 ] call CBA_fnc_waitAndExecute;

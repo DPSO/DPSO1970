@@ -1,5 +1,5 @@
 /*
-Function: DPSO_fnc_GetKeys
+Function: dpso_fnc_GetKeys
 
 Description:
 	Get all the keys in a map as an array

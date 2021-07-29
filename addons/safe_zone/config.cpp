@@ -2,7 +2,7 @@
 
 class CfgPatches
 {
-	class DPSO_SafeZone
+	class dpso_SafeZone
 	{
 		author = AUTHOR;
 		name = NAME;

@@ -1,5 +1,5 @@
 /*
-Function: DPSO_fnc_SpawnAI
+Function: dpso_fnc_SpawnAI
 
 Description:
     Used to populate an area with a predefined enemy faction. This function has a large list of parameters
@@ -34,7 +34,7 @@ Example:
 	        "Sahrani Liberation Army",
 	        [5, 100, 200],
 	        [3, 5]
-	        ] call DPSO_fnc_SpawnAI;
+	        ] call dpso_fnc_SpawnAI;
 	        Example 2:
 	        ["Kavala",
 	        [2955.43,6010.11,0],
@@ -50,7 +50,7 @@ Example:
 	        [2, 3],
 	        [5, 6],
             "RANDOM"
-        ] call DPSO_fnc_SpawnAI;
+        ] call dpso_fnc_SpawnAI;
 	(end)
 
 Author:
@@ -99,16 +99,16 @@ call {
 
 _center set [2, 0];
 
-_garrisons params ["_GarrisonedGroupsMin", ["_GarrisonedGroupsMax", 0], ["_infSkill", "DPSO Default"]];
-_inf params ["_infMin", ["_infMax", 0], ["_infSkill", "DPSO Default"]];
-_infaa params ["_infaaMin", ["_infaaMax",0], ["_infaaSkill", "DPSO Default"]];
-_infat params ["_infatMin", ["_infatMax",0], ["_infatSkill", "DPSO Default"]];
-_sniper params ["_sniperMin", ["_sniperMax",0], ["_sniperSkill", "DPSO Default"]];
-_vehaa params ["_vehaaMin", ["_vehaaMax",0], ["_vehaaSkill", "DPSO Default"]];
-_vehmrap params ["_vehmrapMin", ["_vehmrapMax",0], ["_vehmrapSkill", "DPSO Default"]];
-_vehlight params ["_vehlightMin", ["_vehlightMax",0], ["_vehlightSkill", "DPSO Default"]];
-_vehheavy params ["_vehheavyMin", ["_vehheavyMax",0], ["_vehheavySkill", "DPSO Default"]];
-_vehrand params ["_vehrandMin", ["_vehrandMax",0], ["_vehrandSkill", "DPSO Default"]];
+_garrisons params ["_GarrisonedGroupsMin", ["_GarrisonedGroupsMax", 0], ["_infSkill", "dpso Default"]];
+_inf params ["_infMin", ["_infMax", 0], ["_infSkill", "dpso Default"]];
+_infaa params ["_infaaMin", ["_infaaMax",0], ["_infaaSkill", "dpso Default"]];
+_infat params ["_infatMin", ["_infatMax",0], ["_infatSkill", "dpso Default"]];
+_sniper params ["_sniperMin", ["_sniperMax",0], ["_sniperSkill", "dpso Default"]];
+_vehaa params ["_vehaaMin", ["_vehaaMax",0], ["_vehaaSkill", "dpso Default"]];
+_vehmrap params ["_vehmrapMin", ["_vehmrapMax",0], ["_vehmrapSkill", "dpso Default"]];
+_vehlight params ["_vehlightMin", ["_vehlightMax",0], ["_vehlightSkill", "dpso Default"]];
+_vehheavy params ["_vehheavyMin", ["_vehheavyMax",0], ["_vehheavySkill", "dpso Default"]];
+_vehrand params ["_vehrandMin", ["_vehrandMax",0], ["_vehrandSkill", "dpso Default"]];
 
 _patrolMethod = toUpper _patrolMethod;
 
@@ -116,9 +116,9 @@ private ["_fnc_patrol_EI", "_fnc_patrol_EI_spec", "_fnc_patrol_veh", "_fnc_pos_E
 
 switch (_patrolMethod) do {
     case "ROAD": {
-        _fnc_patrol_EI = compile "[(_this select 0), (_this select 3)] call DPSO_fnc_RoadPatrol;";
-        _fnc_patrol_EI_spec = compile "[(_this select 0), (_this select 3)] call DPSO_fnc_RoadPatrol;";
-        _fnc_patrol_veh = compile "[(_this select 0), (_this select 3)] call DPSO_fnc_RoadPatrol;";
+        _fnc_patrol_EI = compile "[(_this select 0), (_this select 3)] call dpso_fnc_RoadPatrol;";
+        _fnc_patrol_EI_spec = compile "[(_this select 0), (_this select 3)] call dpso_fnc_RoadPatrol;";
+        _fnc_patrol_veh = compile "[(_this select 0), (_this select 3)] call dpso_fnc_RoadPatrol;";
         _fnc_pos_EI = compile "selectRandom (_this select 2)";
         _fnc_pos_veh = compile "selectRandom (_this select 2)";
     };
@@ -126,15 +126,15 @@ switch (_patrolMethod) do {
         _fnc_patrol_EI = compile "[(_this select 0), (_this select 1), (_this select 2)/1.5, 3 + round (random 2), [""SAD"", ""MOVE""] select (random 1 > 0.33), [""AWARE"", ""SAFE""] select (random 1 > 0.5), [""red"", ""white""] select (random 1 > 0.2), [""limited"", ""normal""] select (random 1 > 0.5)] call CBA_fnc_taskPatrol;";
         _fnc_patrol_EI_spec = compile "[(_this select 0), (_this select 1), (_this select 2)/1.5, 3 + round (random 2), ""SAD"", [""AWARE"", ""SAFE""] select (random 1 > 0.5), [""red"", ""white""] select (random 1 > 0.2), [""limited"", ""normal""] select (random 1 > 0.5)] call CBA_fnc_taskPatrol;";
         _fnc_patrol_veh = compile "[(_this select 0), (_this select 1), (_this select 2) / 2, 3 + round (random 2), ""MOVE"", [""AWARE"", ""SAFE""] select (random 1 > 0.5), [""red"", ""white""] select (random 1 > 0.2), [""limited"", ""normal""] select (random 1 > 0.5)] call CBA_fnc_taskPatrol;";
-        _fnc_pos_EI = compile "[[[(_this select 0), (_this select 1)],[]],[""water""]] call DPSO_fnc_SafePos;";
-        _fnc_pos_veh = compile "[[[(_this select 0), (_this select 1)], []], [""water""], { !(_this isFlatEmpty [2,-1,0.5,1,0,false,objNull] isEqualTo []) }] call DPSO_fnc_SafePos;";
+        _fnc_pos_EI = compile "[[[(_this select 0), (_this select 1)],[]],[""water""]] call dpso_fnc_SafePos;";
+        _fnc_pos_veh = compile "[[[(_this select 0), (_this select 1)], []], [""water""], { !(_this isFlatEmpty [2,-1,0.5,1,0,false,objNull] isEqualTo []) }] call dpso_fnc_SafePos;";
     };
     default {
-        _fnc_patrol_EI = compile "systemChat ""Error: Unknown patrol method supplied to DPSO_fnc_SpawnAI!"";";
-        _fnc_patrol_EI_spec = compile "systemChat ""Error: Unknown patrol method supplied to DPSO_fnc_SpawnAI!"";";
-        _fnc_patrol_veh = compile "systemChat ""Error: Unknown patrol method supplied to DPSO_fnc_SpawnAI!"";";
-        _fnc_pos_EI = compile "systemChat ""Error: Unknown patrol method supplied to DPSO_fnc_SpawnAI!"";";
-        _fnc_pos_veh = compile "systemChat ""Error: Unknown patrol method supplied to DPSO_fnc_SpawnAI!"";";
+        _fnc_patrol_EI = compile "systemChat ""Error: Unknown patrol method supplied to dpso_fnc_SpawnAI!"";";
+        _fnc_patrol_EI_spec = compile "systemChat ""Error: Unknown patrol method supplied to dpso_fnc_SpawnAI!"";";
+        _fnc_patrol_veh = compile "systemChat ""Error: Unknown patrol method supplied to dpso_fnc_SpawnAI!"";";
+        _fnc_pos_EI = compile "systemChat ""Error: Unknown patrol method supplied to dpso_fnc_SpawnAI!"";";
+        _fnc_pos_veh = compile "systemChat ""Error: Unknown patrol method supplied to dpso_fnc_SpawnAI!"";";
     };
 };
 
@@ -152,7 +152,7 @@ private _FactionSide = "East";
 private _InfantryType = "Infantry";
 private _InfantryGroup = "OIA_InfTeam";
 private _vehRandList = [];
-private _AIReporting = DPSO_AI_Reporting;
+private _AIReporting = dpso_AI_Reporting;
 
 // Check for Side from _faction
 private _SideNumber = getnumber (configfile >> "CfgFactionClasses" >> _faction >> "side");
@@ -173,7 +173,7 @@ call {
 };
 if (isnil "_Faction") exitwith {systemchat format ["Faction missing from %1 at %2",_grpPrefix, _center]};
 
-_GetFactionArrays = compileFinal format ["call DPSO_fnc_%1", _faction];
+_GetFactionArrays = compileFinal format ["call dpso_fnc_%1", _faction];
 _FactionArrays = call _GetFactionArrays;
 _FactionArrays params ["_InfantryType", "_infaaList", "_infatList", "_sniperList", "_vehAAList", "_vehMrapList", "_vehLightList", "_vehHeavyList"];
 
@@ -206,7 +206,7 @@ if (_patrolMethod isEqualTo "ROAD") then {
     // If we still don't have enough positions, fill the remaining spots up with random positions
     if (count _roadList < _minPositions) then {
     	while {count _roadList < _minPositions} do {
-    		_rpos = [[[_center, _radius],[]],["water"]] call DPSO_fnc_SafePos;
+    		_rpos = [[[_center, _radius],[]],["water"]] call dpso_fnc_SafePos;
     		_roadList append [_rpos];
     	};
     };
@@ -246,7 +246,7 @@ if !(_infList isEqualTo []) then {
                 _infList, _GarrisonedGroupsExact,
                 nil, 2,
                 4, []
-            ] call DPSO_fnc_infantryGarrison
+            ] call dpso_fnc_infantryGarrison
         );
         _units append _garrisonedUnits;
 
@@ -257,7 +257,7 @@ if !(_infList isEqualTo []) then {
         { _x setGroupIdGlobal [format["%1_gar%2", _grpPrefix, _forEachIndex]]; } forEach _grps;
     };
 } else {
-    if (_AIReporting && { _GarrisonedGroupsMax >0 }) exitwith {systemchat format ["DPSO Fundamentals: INFO: %1 no Infantry Teams to select from. Step skipped.",_FactionName]};
+    if (_AIReporting && { _GarrisonedGroupsMax >0 }) exitwith {systemchat format ["dpso 1970s: INFO: %1 no Infantry Teams to select from. Step skipped.",_FactionName]};
 };
 ///////////////////////////////////////////////////////////
 // STANDARD INFANTRY
@@ -271,11 +271,11 @@ if !(_infList isEqualTo []) then {
         _g = [_rpos, _side, _confBase >> (selectRandom _infList)] call BIS_fnc_spawnGroup;
         _g setGroupIdGlobal [format["%1_inf%2", _grpPrefix, _x]];
         [_g, _center, _radius, _waypoints] call _fnc_patrol_EI;
-        [_g, _infSkill] call DPSO_fnc_SetUnitSkill;
+        [_g, _infSkill] call dpso_fnc_SetUnitSkill;
         _units append (units _g);
     };
 } else {
-    if (_AIReporting && { _infMax >0 }) exitwith {systemchat format ["DPSO Fundamentals: INFO: %1 no Infantry Teams to select from. Step skipped.",_FactionName]};
+    if (_AIReporting && { _infMax >0 }) exitwith {systemchat format ["dpso 1970s: INFO: %1 no Infantry Teams to select from. Step skipped.",_FactionName]};
     };
 
 ///////////////////////////////////////////////////////////
@@ -291,11 +291,11 @@ if !(_infaaList isEqualTo []) then {
         _g = [_rpos, _side, _confBase >> (selectRandom _infaaList)] call BIS_fnc_spawnGroup;
         _g setGroupIdGlobal [format["%1_infaa%2", _grpPrefix, _x]];
         [_g, _center, _radius, _waypoints] call _fnc_patrol_EI_spec;
-        [_g, _infaaSkill] call DPSO_fnc_SetUnitSkill;
+        [_g, _infaaSkill] call dpso_fnc_SetUnitSkill;
         _units append (units _g);
     };
 } else {
-    if (_AIReporting && { _InfaaMax >0 }) exitwith {systemchat format ["DPSO Fundamentals: INFO: %1 no AA Teams to select from. Step skipped.",_FactionName]};
+    if (_AIReporting && { _InfaaMax >0 }) exitwith {systemchat format ["dpso 1970s: INFO: %1 no AA Teams to select from. Step skipped.",_FactionName]};
     };
 
 ///////////////////////////////////////////////////////////
@@ -311,11 +311,11 @@ if !(_infatList isEqualTo []) then {
         _g = [_rpos, _side, _confBase >> (selectRandom _infatList)] call BIS_fnc_spawnGroup;
         _g setGroupIdGlobal [format["%1_infat%2", _grpPrefix, _x]];
         [_g, _center, _radius, _waypoints] call _fnc_patrol_EI_spec;
-        [_g, _infatSkill] call DPSO_fnc_SetUnitSkill;
+        [_g, _infatSkill] call dpso_fnc_SetUnitSkill;
         _units append (units _g);
     };
 } else {
-    if (_AIReporting && { _InfatMax >0 }) exitwith {systemchat format ["DPSO Fundamentals: INFO: %1 no AT Teams to select from. Step skipped.",_FactionName]};
+    if (_AIReporting && { _InfatMax >0 }) exitwith {systemchat format ["dpso 1970s: INFO: %1 no AT Teams to select from. Step skipped.",_FactionName]};
     };
 
 ///////////////////////////////////////////////////////////
@@ -331,11 +331,11 @@ if !(_sniperList isEqualTo []) then {
         _g setGroupIdGlobal [format["%1_sniper%2", _grpPrefix, _x]];
         _g setBehaviour "COMBAT";
         _g setCombatMode "RED";
-        [_g, _sniperSkill] call DPSO_fnc_SetUnitSkill;
+        [_g, _sniperSkill] call dpso_fnc_SetUnitSkill;
         _units append (units _g);
     };
 } else {
-    if (_AIReporting && { _SniperMax >0 }) exitwith {systemchat format ["DPSO Fundamentals: INFO: %1 no Sniper Teams to select from. Step skipped.",_FactionName]};
+    if (_AIReporting && { _SniperMax >0 }) exitwith {systemchat format ["dpso 1970s: INFO: %1 no Sniper Teams to select from. Step skipped.",_FactionName]};
     };
 
 ///////////////////////////////////////////////////////////
@@ -359,7 +359,7 @@ if !(_vehAAList isEqualTo []) then {
 
             [_v, _g] call BIS_fnc_spawnCrew;
             [_g, _center, _radius, _waypoints] call _fnc_patrol_veh;
-            [_g, _vehaaSkill] call DPSO_fnc_SetUnitSkill;
+            [_g, _vehaaSkill] call dpso_fnc_SetUnitSkill;
             if (random 1 >= 0.5) then { _v allowCrewInImmobile true; };
 
             _units append (units _g);
@@ -367,7 +367,7 @@ if !(_vehAAList isEqualTo []) then {
         };
     };
 } else {
-    if (_AIReporting && { _VehAAMax >0 }) exitwith {systemchat format ["DPSO Fundamentals: INFO: %1 no AA Vehicles to select from. Step skipped.",_FactionName]};
+    if (_AIReporting && { _VehAAMax >0 }) exitwith {systemchat format ["dpso 1970s: INFO: %1 no AA Vehicles to select from. Step skipped.",_FactionName]};
     };
 
 ///////////////////////////////////////////////////////////
@@ -391,7 +391,7 @@ if !(_vehmrapList isEqualTo []) then {
 
             [_v, _g] call BIS_fnc_spawnCrew;
             [_g, _center, _radius, _waypoints] call _fnc_patrol_veh;
-            [_g, _vehmrapSkill] call DPSO_fnc_SetUnitSkill;
+            [_g, _vehmrapSkill] call dpso_fnc_SetUnitSkill;
             if (random 1 >= 0.5) then { _v allowCrewInImmobile true; };
 
             _units append (units _g);
@@ -399,7 +399,7 @@ if !(_vehmrapList isEqualTo []) then {
         };
     };
 } else {
-    if (_AIReporting && { _VehMRAPMax >0 }) exitwith {systemchat format ["DPSO Fundamentals: INFO: %1 no MRAPs to select from. Step skipped.",_FactionName]};
+    if (_AIReporting && { _VehMRAPMax >0 }) exitwith {systemchat format ["dpso 1970s: INFO: %1 no MRAPs to select from. Step skipped.",_FactionName]};
     };
 
 ///////////////////////////////////////////////////////////
@@ -424,7 +424,7 @@ if !(_vehLightList isEqualTo []) then {
 
             [_v, _g] call BIS_fnc_spawnCrew;
             [_g, _center, _radius, _waypoints] call _fnc_patrol_veh;
-            [_g, _vehLightSkill] call DPSO_fnc_SetUnitSkill;
+            [_g, _vehLightSkill] call dpso_fnc_SetUnitSkill;
             if (random 1 >= 0.5) then { _v allowCrewInImmobile true; };
 
             _units append (units _g);
@@ -432,7 +432,7 @@ if !(_vehLightList isEqualTo []) then {
         };
     };
 } else {
-    if (_AIReporting && { _VehLightMax >0 }) exitwith {systemchat format ["DPSO Fundamentals: INFO: %1 no Light Vehicles to select from. Step skipped.",_FactionName]};
+    if (_AIReporting && { _VehLightMax >0 }) exitwith {systemchat format ["dpso 1970s: INFO: %1 no Light Vehicles to select from. Step skipped.",_FactionName]};
     };
 
 ///////////////////////////////////////////////////////////
@@ -456,7 +456,7 @@ if !(_vehHeavyList isEqualTo []) then {
 
             [_v, _g] call BIS_fnc_spawnCrew;
             [_g, _center, _radius, _waypoints] call _fnc_patrol_veh;
-            [_g, _vehHeavySkill] call DPSO_fnc_SetUnitSkill;
+            [_g, _vehHeavySkill] call dpso_fnc_SetUnitSkill;
             if (random 1 >= 0.5) then { _v allowCrewInImmobile true; };
 
             _units append (units _g);
@@ -465,7 +465,7 @@ if !(_vehHeavyList isEqualTo []) then {
     };
 } else {
 
-    if (_AIReporting && { _VehHeavyMax >0 }) exitwith {systemchat format ["DPSO Fundamentals: INFO: %1 no Heavy Vehicles to select from. Step skipped.",_FactionName]};
+    if (_AIReporting && { _VehHeavyMax >0 }) exitwith {systemchat format ["dpso 1970s: INFO: %1 no Heavy Vehicles to select from. Step skipped.",_FactionName]};
     };
 
 
@@ -494,7 +494,7 @@ if !(_vehRandList isEqualTo []) then {
 
             [_v, _g] call BIS_fnc_spawnCrew;
             [_g, _center, _radius, _waypoints] call _fnc_patrol_veh;
-            [_g, _vehrandSkill] call DPSO_fnc_SetUnitSkill;
+            [_g, _vehrandSkill] call dpso_fnc_SetUnitSkill;
             if (random 1 >= 0.5) then { _v allowCrewInImmobile true; };
 
             _units append (units _g);

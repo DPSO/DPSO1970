@@ -1,6 +1,6 @@
 #include "\z\dpso\addons\common\script_component.hpp"
 /*
- * Name: DPSO_common_fnc_initGroupVar
+ * Name: dpso_common_fnc_initGroupVar
  * Author: Snippers
  *
  * Arguments:

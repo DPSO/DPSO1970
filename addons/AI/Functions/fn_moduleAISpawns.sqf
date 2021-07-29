@@ -45,8 +45,8 @@ _SpawnLocation = (getPos _logic);
     [_EIATMin, _EIATMax],
     [_EISniperMin, _EISniperMax],
     [_VehAAMin, _VehAAMax],
-    [_VehLightMin, _VehLightMax],
+    [_VehLightMin, _VehLightMax],    
     [_VehMRAPMin, _VehMRAPMax],
     [_VehHeavyMin, _VehHeavyMax],
     [_VehRandomMin, _VehRandomMax]
-] call DPSO_fnc_SpawnAI;
+] call dpso_fnc_SpawnAI;

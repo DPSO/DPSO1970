@@ -9,5 +9,5 @@ params [
 
 private _objects = synchronizedObjects _logic;
 {
-    [_x] call DPSO_fnc_setMedicalFacility;
+    [_x] call dpso_fnc_setMedicalFacility;
 } foreach _objects;

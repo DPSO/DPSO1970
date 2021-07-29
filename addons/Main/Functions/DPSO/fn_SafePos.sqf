@@ -1,5 +1,5 @@
 /*
-Function: DPSO_fnc_SafePos
+Function: dpso_fnc_SafePos
 
 Description:
 	Finds a safe position based on the given parameters, using BIS_fnc_randomPos.

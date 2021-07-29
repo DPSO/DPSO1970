@@ -1,6 +1,6 @@
 // Vehicle Crew List
 [
-    "DPSO_Main_VehicleCrewList",
+    "dpso_Main_VehicleCrewList",
     "CHECKBOX",
     ["Vehicle Crew List", "Shows a list of players in a vehicle."],
     "DPSO Main",
@@ -13,46 +13,46 @@
 
 // Dynamic Groups
 [
-    "DPSO_Main_DynamicGroups",
+    "dpso_Main_DynamicGroups",
     "CHECKBOX",
     ["BIS Dynamic Groups", "Enable Vanilla Dynamic Groups system (U Menu)"],
     "DPSO Main",
     false,
     true,
     {
-        if (_this) then { call DPSO_fnc_DynamicGroups};
+        if (_this) then { call dpso_fnc_DynamicGroups};
     }
 ] call CBA_Settings_fnc_init;
 
 // YAINA Earplugs
 [
-    "DPSO_Main_Earplugs",
+    "dpso_Main_Earplugs",
     "CHECKBOX",
     ["YAINA Earplugs", "Enable YAINA Earplugs addactions. Cannot be used with @ACE."],
     "DPSO Main",
     false,
     true,
     {
-         if (_this && { hasinterface }) then  { call DPSO_fnc_Earplugs};
+         if (_this && { hasinterface }) then  { call dpso_fnc_Earplugs};
     }
 ] call CBA_Settings_fnc_init;
 
 // PilotCheck
 [
-    "DPSO_Main_PilotCheck",
+    "dpso_Main_PilotCheck",
     "CHECKBOX",
     ["Pilot Restrictions", "Restrict aircraft so only those with 'Pilot' Trait can fly."],
     "DPSO Main",
     false,
     true,
     {
-         if (_this && { hasinterface }) then  { call DPSO_fnc_PilotCheck};
+         if (_this && { hasinterface }) then  { call dpso_fnc_PilotCheck};
     }
 ] call CBA_Settings_fnc_init;
 
 // PilotCheck
 [
-    "DPSO_Main_MaydayAccess",
+    "dpso_Main_MaydayAccess",
     "LIST",
     ["Aircraft Emergency Access", "Restrict access to the emergency pilot takeover for helicopters (requires Pilot Check Enabled)"],
     "DPSO Main",
@@ -65,35 +65,35 @@
 
 // Voyager Compass
 [
-    "DPSO_Main_VoyagerCompass",
+    "dpso_Main_VoyagerCompass",
     "CHECKBOX",
     ["Voyager Compass HUD", "Enable Voyager Compass HUD. Players can still disable locally."],
     "DPSO Main",
     false,
     true,
     {
-         if (_this && { hasinterface }) then  { call DPSO_fnc_VoyagerCompass};
+         if (_this && { hasinterface }) then  { call dpso_fnc_VoyagerCompass};
     }
 ] call CBA_Settings_fnc_init;
 
 // QS Mag Repack
 [
-    "DPSO_Main_QSMagRepack",
+    "dpso_Main_QSMagRepack",
     "CHECKBOX",
     ["QS Repack Magazines", "Allows players to repack magazines through an add action. Not used with ACE."],
     "DPSO Main",
     false,
     true,
     {
-         if (_this && { hasinterface }) then  { call DPSO_fnc_QSRepackMags};        
+         if (_this && { hasinterface }) then  { call dpso_fnc_QSRepackMags};        
     }
 ] call CBA_Settings_fnc_init;
 
 // CH View Distance
 [
-    "DPSO_Main_CHViewDistance",
+    "dpso_Main_CHViewDistance",
     "CHECKBOX",
-    ["CH View Distance", "Enable CHVD within DPSO Fundamentals"],
+    ["CH View Distance", "Enable CHVD within dpso 1970s"],
     "DPSO Main",
     false,
     true,
@@ -104,7 +104,7 @@
 
 // CHVD - Max View Distance
 [
-    "DPSO_Main_ViewDistanceMaxDistance",
+    "dpso_Main_ViewDistanceMaxDistance",
     "SLIDER",
     ["CHVD - Max View Distance", "Max distance a player can set CHVD View Distance to."],
     "DPSO Main",
@@ -117,7 +117,7 @@
 
 // CHVD - Max Object View Distance
 [
-    "DPSO_Main_ViewDistanceMaxObjectDistance",
+    "dpso_Main_ViewDistanceMaxObjectDistance",
     "SLIDER",
     ["CHVD - Max Object View Distance", "Max distance a player can set CHVD Object View Distance to."],
     "DPSO Main",
@@ -130,7 +130,7 @@
 
 // CHVD - Allow No Grass
 [
-    "DPSO_Main_ViewDistanceNoGrass",
+    "dpso_Main_ViewDistanceNoGrass",
     "CHECKBOX",
     ["CHVD - Allow No Grass", "Should players be allowed to turn grass off?"],
     "DPSO Main",
@@ -143,33 +143,33 @@
 
 // Arsenal - Save/Load
 [
-    "DPSO_Main_ArsenalSaveLoad",
+    "dpso_Main_ArsenalSaveLoad",
     "CHECKBOX",
     ["Arsenal - Save/Load", "Should a player be allowed to Save/Load Loadouts in the Arsenal?"],
     "DPSO Main",
     true,
     true,
     {
-        if (!_this && { hasinterface }) then  { call DPSO_fnc_ArsenalLoadSave};
+        if (!_this && { hasinterface }) then  { call dpso_fnc_ArsenalLoadSave};
     }
 ] call CBA_Settings_fnc_init;
 
 // Flip Vehicle
 [
-    "DPSO_Main_FlipVehicle",
+    "dpso_Main_FlipVehicle",
     "CHECKBOX",
     ["Flip Vehicle", "Add an action to players to allow them to flip land vehicles."],
     "DPSO Main",
     false,
     true,
     {
-        if (_this && { hasinterface }) then  { call DPSO_fnc_FlipVehicle};
+        if (_this && { hasinterface }) then  { call dpso_fnc_FlipVehicle};
     }
 ] call CBA_Settings_fnc_init;
 
 // TFAR - Range Multiplyer
 [
-    "DPSO_Main_TFARTransmitRange",
+    "dpso_Main_TFARTransmitRange",
     "SLIDER",
     ["TFAR - Range Multiplyer", "Increase or decrease max Transmit Range. 0.1 = poor range, 3.5 = All of Altis"],
     "DPSO Main",
@@ -182,7 +182,7 @@
 
 // TFAR - Terrain Interference
 [
-    "DPSO_Main_TFARTerrainInterference",
+    "dpso_Main_TFARTerrainInterference",
     "SLIDER",
     ["TFAR - Terrain Interference", "How much Terrain interferes with range. 0.1 = little impact, 2.0 = large impact."],
     "DPSO Main",
@@ -195,33 +195,33 @@
 
 // Cue Cards
 [
-    "DPSO_Main_CueCards",
+    "dpso_Main_CueCards",
     "CHECKBOX",
     ["Cue Cards", "Show/Hide Cue Cards in ACE Self Interaction Menu."],
     "DPSO Main",
     true,
     true,
     {
-        if (_this && { hasinterface }) then  { call DPSO_fnc_AddCueCards};
+        if (_this && { hasinterface }) then  { call dpso_fnc_AddCueCards};
     }
 ] call CBA_Settings_fnc_init;
 
 // Diary Defaults
 [
-    "DPSO_Main_Diary",
+    "dpso_Main_Diary",
     "CHECKBOX",
-    ["Diary Defaults", "Show/Hide Default DPSO Diary Entries."],
+    ["Diary Defaults", "Show/Hide Default dpso Diary Entries."],
     "DPSO Main",
     true,
     true,
     {
-        if (_this && { hasinterface }) then  { call DPSO_fnc_Diary};
+        if (_this && { hasinterface }) then  { call dpso_fnc_Diary};
     }
 ] call CBA_Settings_fnc_init;
 
 // MapIcons
 [
-    "DPSO_Main_MapIcons",
+    "dpso_Main_MapIcons",
     "CHECKBOX",
     ["Enable Save/Load Markers", "Enable the MapIcons system to save/load markers"],
     "DPSO Main",
@@ -229,29 +229,29 @@
     true,
     {
 		["dpso-saveMarkers",{
-            [] call DPSO_MI_fnc_openDialog;
+            [] call LR_MI_fnc_openDialog;
         },"all"] call CBA_fnc_registerChatCommand;
 
-        [] call DPSO_MI_fnc_loadNotification;
+        [] call LR_MI_fnc_loadNotification;
     }
 ] call CBA_Settings_fnc_init;
 
 // Fatigue (Vanilla ONLY)
 [
-    "DPSO_Main_FatigueVanilla",
+    "dpso_Main_FatigueVanilla",
     "CHECKBOX",
     ["Fatigue (Vanilla ONLY)", "Enable/Disable Vanilla Fatigue System. Does not apply with @ACE."],
     "DPSO Main",
     true,
     true,
     {
-        if (_this && { hasinterface }) then  { call DPSO_fnc_VanillaFatigue};
+        if (_this && { hasinterface }) then  { call dpso_fnc_VanillaFatigue};
     }
 ] call CBA_Settings_fnc_init;
 
 // FPS Counter
 [
-    "DPSO_Main_FPSCounter",
+    "dpso_Main_FPSCounter",
     "CHECKBOX",
     ["FPS Counter", "Show FPS counter of Player, Server & Headless Client on the map."],
     "DPSO Main",
@@ -262,41 +262,41 @@
     }
 ] call CBA_Settings_fnc_init;
 
-// DPSO Logging
+// dpso Logging
 [
-    "DPSO_Main_Logging",
+    "dpso_Main_Logging",
     "CHECKBOX",
     ["DPSO Logging", "Log connected players, their roles and if they go unconcious with ACE. Requires @A3Log"],
     "DPSO Main",
     false,
     true,
     {
-        if (_this) then { call DPSO_fnc_Logs};
+        if (_this) then { call dpso_fnc_Logs};
     }
 ] call CBA_Settings_fnc_init;
 
-// DPSO_Main_DynamicSim
+// dpso_Main_DynamicSim
 [
-    "DPSO_Main_DynamicSim",
+    "dpso_Main_DynamicSim",
     "CHECKBOX",
-    ["DPSO Dynamic Sim", "Simple check for Dynamic Sim enabled. If not enabled it will enable it to default DPSO Values. "],
+    ["DPSO Dynamic Sim", "Simple check for Dynamic Sim enabled. If not enabled it will enable it to default dpso Values. "],
     "DPSO Main",
     false,
     true,
     {
-        if (_this && { isserver }) then  { call DPSO_fnc_DynamicSim};
+        if (_this && { isserver }) then  { call dpso_fnc_DynamicSim};
     }
 ] call CBA_Settings_fnc_init;
 
-// DPSO_Main_DynamicSim
+// dpso_Main_DynamicSim
 [
-    "DPSO_Main_LockCamVehicle",
+    "dpso_Main_LockCamVehicle",
     "CHECKBOX",
-    ["DPSO Lock Camera in Vehicle", "Locks the camera to first-person inside vehicles. If not enabled it will enable it to default DPSO Values. "],
+    ["DPSO Lock Camera in Vehicle", "Locks the camera to first-person inside vehicles. If not enabled it will enable it to default dpso Values. "],
     "DPSO Main",
     false,
     true,
     {
-        if (_this && {hasInterface}) then  { call DPSO_fnc_LockCamVehicle};
+        if (_this && {hasInterface}) then  { call dpso_fnc_LockCamVehicle};
     }
 ] call CBA_Settings_fnc_init;

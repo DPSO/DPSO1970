@@ -1,5 +1,5 @@
 /*
-Function: DPSO_fnc_findInArrayMap
+Function: dpso_fnc_findInArrayMap
 
 Description:
 	Find a certain element in a map by ID (the first element of the map entry).

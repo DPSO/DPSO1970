@@ -1,10 +1,10 @@
-class DPSO_ModuleMedical: Module_F
+class dpso_ModuleMedical: Module_F
 {
 	scope = 2;
 	displayName = "Medical Facility";
 	icon = "\z\dpso\addons\media\images\icons\Medical Area.paa";
-	category = QUOTE(PREFIX);
-	function = "DPSO_fnc_moduleMedicalFacility";
+	category = "dpso_Modules";
+	function = "dpso_fnc_moduleMedicalFacility";
 	functionPriority = 4;
 	isGlobal = 1;
 	isTriggerActivated = 0;

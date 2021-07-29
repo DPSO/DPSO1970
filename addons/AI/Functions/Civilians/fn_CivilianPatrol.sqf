@@ -1,5 +1,5 @@
 /*
-Function: DPSO_fnc_CivilianPatrol
+Function: dpso_fnc_CivilianPatrol
 
 Description:
 	Sets up a patrol for civilians with appropriate reactions to getting shot at.
@@ -32,7 +32,7 @@ _findWps = _patrolLengthMin + floor (random (_patrolLengthMax - _patrolLengthMin
 _group setBehaviour "SAFE";
 _group setSpeedMode "LIMITED";
 
-_EHfiredNear = (leader _group) addEventHandler ["FiredNear", {_this call DPSO_fnc_CivBreakPatrol;}];
+_EHfiredNear = (leader _group) addEventHandler ["FiredNear", {_this call dpso_fnc_CivBreakPatrol;}];
 
 for "_i" from 0 to _findWps do {
 	_wp = selectRandom _waypoints;

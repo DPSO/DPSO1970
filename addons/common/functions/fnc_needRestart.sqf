@@ -13,7 +13,7 @@
  *	nothing
  *	
  *	Example:
- *	["DPSO_debug_enabled", 2] call dpso_fnc_needRestart;
+ *	["dpso_debug_enabled", 2] call dpso_fnc_needRestart;
  *	
  */
 
@@ -35,22 +35,22 @@ switch (_restartID) do {
 	
 	// RESTART MISSION
 	case 1: {
-		[_setting, _restartID] remoteExec ["DPSO_fnc_needRestartLocal", 0];
+		[_setting, _restartID] remoteExec ["dpso_fnc_needRestartLocal", 0];
 	};
 	
 	// RESTART SESSION (GLOBAL)
 	case 2: {
-		[_setting, _restartID] remoteExec ["DPSO_fnc_needRestartLocal", 0];
+		[_setting, _restartID] remoteExec ["dpso_fnc_needRestartLocal", 0];
 	};
 	
 	// RESTART SESSION (PLAYER)
 	case 3: {
-		[_setting, _restartID] remoteExec ["DPSO_fnc_needRestartLocal", player];
+		[_setting, _restartID] remoteExec ["dpso_fnc_needRestartLocal", player];
 	};
 	
 	// RESTART ENGINE
 	default {
-		[_setting, _restartID] remoteExec ["DPSO_fnc_needRestartLocal", 0];
+		[_setting, _restartID] remoteExec ["dpso_fnc_needRestartLocal", 0];
 	};
 	
 };

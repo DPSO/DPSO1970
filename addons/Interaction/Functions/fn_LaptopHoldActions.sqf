@@ -1,5 +1,5 @@
 /*
-Function: DPSO_fnc_LaptopHoldActions
+Function: dpso_fnc_LaptopHoldActions
 
 Description:
     Adds Hold AddActions to a Laptop. Can be placed in the init field of a laptop or executed via script.
@@ -17,10 +17,10 @@ Return Value:
 
 Examples:
     (begin example)
-        [this] call DPSO_fnc_LaptopHoldActions;
-		[MyLaptopName] call DPSO_fnc_LaptopHoldActions;
-		[this, "Download the Intel"] call DPSO_fnc_LaptopHoldActions;
-		[this, "Trigger the Alarm", 5, "A3\Sounds_F\sfx\alarm_blufor.wss"] call DPSO_fnc_LaptopHoldActions;
+        [this] call dpso_fnc_LaptopHoldActions;
+		[MyLaptopName] call dpso_fnc_LaptopHoldActions;
+		[this, "Download the Intel"] call dpso_fnc_LaptopHoldActions;
+		[this, "Trigger the Alarm", 5, "A3\Sounds_F\sfx\alarm_blufor.wss"] call dpso_fnc_LaptopHoldActions;
     (end)
 
 Author:
@@ -60,8 +60,8 @@ params [
 		_Newobject setDir _OriginalDir;
 		{_x addCuratorEditableObjects [[_Newobject], false];} forEach allcurators;
 //		playSound3D [((_this select 2) select 3), _Newobject, false, getposATL _Newobject, 1, 1, 200];
-		[_Newobject, (_this select 2) select 3, (_this select 2) select 4, (_this select 2) select 5] call DPSO_fnc_Sound3D;
-//		[_Newobject, "AirRaid"] call DPSO_fnc_Sound3D;
+		[_Newobject, (_this select 2) select 3, (_this select 2) select 4, (_this select 2) select 5] call dpso_fnc_Sound3D;
+//		[_Newobject, "AirRaid"] call dpso_fnc_Sound3D;
 	},
 	{[format["<t color='#cc3232' size = '.5'>Aborted</t>",(_this select 2) select 1],-1,0.8,5,2,0,789] spawn BIS_fnc_dynamicText;},
 	[_object, _Title, _Time, _SoundClass, _distance, _pitch],
@@ -69,7 +69,7 @@ params [
 	true,
 	"Processing",
 	false
-] remoteExec ["DPSO_fnc_AddHoldAction", 0, _object];
+] remoteExec ["dpso_fnc_AddHoldAction", 0, _object];
 
 {
 	_x addCuratorEditableObjects [[_object], false];

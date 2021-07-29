@@ -126,10 +126,10 @@ Otherwise localization will be performed on the server, before tasks configurati
 ## Framework events
 
 ```
-Event "DPSO_tasks_taskCreated"
+Event "dpso_tasks_taskCreated"
   Params
   - 0: Task config name <STRING>
-Event "DPSO_tasks_taskStateChanged"
+Event "dpso_tasks_taskStateChanged"
   Params
   - 0: Task config name <STRING>
   - 1: New task state <STRING>

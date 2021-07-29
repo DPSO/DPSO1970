@@ -34,10 +34,10 @@ switch (_Side) do {
     _ObjName,
     _Faction,
     _Side,
-    _GarrRadius,
+    _GarrRadius,    
     [_GarrisonedUnitsMin, _GarrisonedUnitsMax],
-    _Radius,
+    _Radius,    
     [_civPedPatrolsMin, _civPedPatrolsMax],
     [_civVehPatrolsMin, _civVehPatrolsMax],
     [_civVehParkedMin, _civVehParkedMax]
-] call DPSO_fnc_SpawnCivilians;
+] call dpso_fnc_SpawnCivilians;

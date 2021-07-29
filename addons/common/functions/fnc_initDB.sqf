@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * call DPSO_common_fnc_initDB;
+ * call dpso_common_fnc_initDB;
  *
  */
 private ["_dateTime","_dateTimeStr","_joinedMissionName","_databasename"];

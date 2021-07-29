@@ -7,11 +7,11 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "DPSO_main"
+            "dpso_main"
         };
         author = AUTHOR;
         authors[] = {"veteran29"};
-        VERSION_CONFIG;
+        version = VERSION;
     };
 };
 

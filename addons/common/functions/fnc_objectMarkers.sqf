@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * this call DPSO_common_fnc_objectMarkers;
+ * this call dpso_common_fnc_objectMarkers;
  *
  */
 

@@ -10,7 +10,7 @@ class cfgPatches
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"DPSO_common"};
+        requiredAddons[] = {"dpso_common"};
         VERSION_CONFIG;
     };
 };
@@ -21,7 +21,7 @@ class cfgPatches
 
 #include "display3DEN.hpp"
 
-class DPSO_autotest {
+class dpso_autotest {
     class GVAR(test) {
         code = QUOTE([] call FUNC(testBriefings));
     };

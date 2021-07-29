@@ -9,12 +9,12 @@ private _control = _display displayCtrl IDC_MAP;
 
 _control ctrlAddEventHandler ["MouseMoving", {
     params ["_control"];
-    GVAR(DPSO_customMark) = "customMark" in (ctrlMapMouseOver _control);
+    GVAR(dpso_customMark) = "customMark" in (ctrlMapMouseOver _control);
 }];
 
 _display displayAddEventHandler ["KeyDown", {
     params ["", "_keyCode"];
-    if (!isNil QGVAR(DPSO_customMark) && {GVAR(DPSO_customMark)} && {(_keyCode) == DIK_DELETE}) then {
-        DPSO_unit setVariable ["DPSO_customMarkLocation",nil];
+    if (!isNil QGVAR(dpso_customMark) && {GVAR(dpso_customMark)} && {(_keyCode) == DIK_DELETE}) then {
+        dpso_unit setVariable ["dpso_customMarkLocation",nil];
     };
 }];

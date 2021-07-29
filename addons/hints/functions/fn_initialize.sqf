@@ -12,14 +12,14 @@
  *	nothing
  *	
  *	Example:
- *	[] call DPSO_hints_fnc_initialize;
+ *	[] call dpso_hints_fnc_initialize;
  *	
  */
 
 // -------------------------------------------------------------------------------------------------
 
-private _version = ["dpso_hints"] call DPSO_fnc_getAddonVersion;
-[4, "Addon (v%1) loaded...", [_version], "hints"] call DPSO_fnc_log;
+private _version = ["dpso_hints"] call dpso_fnc_getAddonVersion;
+[4, "Addon (v%1) loaded...", [_version], "hints"] call dpso_fnc_log;
 
 // -------------------------------------------------------------------------------------------------
 
@@ -53,7 +53,7 @@ if (Not hasInterface) exitWith {};
 
 // CLEANUP HINTS
 
-//("DPSO_RscHint" call BIS_fnc_rscLayer) cutRsc ["DPSO_RscHint", "PLAIN", 0, true];
-99 cutRsc ["DPSO_RscHint", "PLAIN", 0, true];
+//("dpso_RscHint" call BIS_fnc_rscLayer) cutRsc ["dpso_RscHint", "PLAIN", 0, true];
+99 cutRsc ["dpso_RscHint", "PLAIN", 0, true];
 
-[] call DPSO_hints_fnc_cleanup;
+[] call dpso_hints_fnc_cleanup;

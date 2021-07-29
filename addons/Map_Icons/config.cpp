@@ -1,0 +1,33 @@
+#include "script_component.hpp"
+
+class CfgPatches
+{
+	class dpso_MapIcons
+	{
+		author = AUTHOR;
+		name = NAME;
+		url = URL;
+		units[] = {};
+		requiredVersion = REQUIRED_VERSION;
+		requiredAddons[] = {"A3_UI_F","cba_main","cba_xeh"};
+		version = VERSION;
+		authors[] = {"MitchJC"};
+		weapons[] = {};
+	};
+};
+
+class CfgFunctions {
+    #include "cfgFunctions.hpp"
+};
+
+class cfgNotifications {
+    class LR_MI_notification {
+        title = "%1";
+        iconPicture = "\A3\ui_f\data\map\markers\military\triangle_CA.paa";
+        description = "%2";
+        duration = 5;
+        priority = 0;
+    };
+};
+
+#include "ui\dialog.hpp"

@@ -1,4 +1,4 @@
-	class DPSO_RHS_Pacific
+	class dpso_RHS_Pacific
 	{
 		class WEST
 		{

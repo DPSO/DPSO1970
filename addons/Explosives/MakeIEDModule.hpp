@@ -1,10 +1,10 @@
-class DPSO_ModuleIED: Module_F
+class dpso_ModuleIED: Module_F
 {
 	scope = 2;
 	displayName = "Create IED";
 	icon = "a3\ui_f\data\GUI\Cfg\Hints\IEDs_CA.paa"; //todo: find better icon
-	category = QUOTE(PREFIX);
-	function = "DPSO_fnc_moduleMakeIED";
+	category = "dpso_Modules";
+	function = "dpso_fnc_moduleMakeIED";
 	functionPriority = 2;
 	isGlobal = 1;
 	isTriggerActivated = 0;
@@ -14,7 +14,7 @@ class DPSO_ModuleIED: Module_F
 	{
 		class DetTime: Edit
   			{
-				property = "DPSO_IED_DetTime";
+				property = "LR_IED_DetTime";
 				displayName = "Detonation Delay";
 				tooltip = "Time in seconds until the IED explodes after being triggered";
 				typeName = "NUMBER";
@@ -23,7 +23,7 @@ class DPSO_ModuleIED: Module_F
 
 		class ProxRadius: Edit
 		{
-			property = "DPSO_IED_ProxRadius";
+			property = "LR_IED_ProxRadius";
 			displayName = "Trigger Proximity Radius";
 			description = "Radius in m around the IED where players will trigger the detonation timer";
 			typeName = "Number";
@@ -31,21 +31,21 @@ class DPSO_ModuleIED: Module_F
 		};
         class Secondaries: Checkbox
         {
-            property = "DPSO_IED_Secondaries";
+            property = "LR_IED_Secondaries";
             displayName = "Secondary Explosions";
             description = "Enable/disable random secondary explosives around the IED";
             defaultValue = true;
         };
         class Announce: Checkbox
         {
-            property = "DPSO_IED_Announce";
+            property = "LR_IED_Announce";
             displayName = "Announcements";
             description = "Enable/disable announcements when the IED is triggered, when it explodes and in certain intervals during the detonation countdown (see Announce Interval)";
             defaultValue = false;
         };
 		class AnnInterval: Edit
 		{
-			property = "DPSO_IED_AnnInterval";
+			property = "LR_IED_AnnInterval";
 			displayName = "Announce Interval";
 			description = "Interval in seconds between announcements, ignore if 'Announcements' are disabled";
 			typeName = "Number";
@@ -53,7 +53,7 @@ class DPSO_ModuleIED: Module_F
 		};
         class ReqDefKit: Checkbox
         {
-            property = "DPSO_IED_ReqDefKit";
+            property = "LR_IED_ReqDefKit";
             displayName = "Require Defusal Kit";
             description = "If enabled, players require an ACE defusal kit in order to be able to defuse the IED";
             defaultValue = true;

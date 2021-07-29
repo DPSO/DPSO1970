@@ -8,39 +8,39 @@ params ["_mode",["_params",[]]];
 fn_removeUnitFromBrief = {
     params ["_channel", "_unit"];
     
-    _list = (_unit get3DENAttribute "DPSO_Briefinglist") params ["_value"];
+    _list = (_unit get3DENAttribute "dpso_Briefinglist") params ["_value"];
     if (_value isEqualType []) then {
         //Is default do nothing
-        _//unit set3DENAttribute ["DPSO_Channellist",str []];
+        _//unit set3DENAttribute ["dpso_Channellist",str []];
     } else {
         _value = call compile _value;
         _value = _value - [_channel];
-        _unit set3DENAttribute ["DPSO_Briefinglist",str _value];
+        _unit set3DENAttribute ["dpso_Briefinglist",str _value];
     };
 };
 
 fn_removeGroupFromBrief = {
     params ["_channel", "_group"];
 
-    _list = (_group get3DENAttribute "DPSO_Briefinglist") params ["_value"];
+    _list = (_group get3DENAttribute "dpso_Briefinglist") params ["_value"];
     if (_value isEqualType []) then {
         //Is Default do nothing
-        //_group set3DENAttribute ["DPSO_ChannellistLeader",str []];
+        //_group set3DENAttribute ["dpso_ChannellistLeader",str []];
     } else {
         _value = call compile _value;
         _value = _value - [_curSel];
-        _group set3DENAttribute ["DPSO_Briefinglist",str _value];
+        _group set3DENAttribute ["dpso_Briefinglist",str _value];
     };
 
     
-    _list = (_group get3DENAttribute "DPSO_Briefinglist") params ["_value"];
+    _list = (_group get3DENAttribute "dpso_Briefinglist") params ["_value"];
     if (_value isEqualType []) then {
         //is default do nothing
-        //_group set3DENAttribute ["DPSO_Channellist",str []];
+        //_group set3DENAttribute ["dpso_Channellist",str []];
     } else {
         _value = call compile _value;
         _value = _value - [_curSel];
-        _group set3DENAttribute ["DPSO_Briefinglist",str _value];
+        _group set3DENAttribute ["dpso_Briefinglist",str _value];
     };
     // do units
     {
@@ -61,7 +61,7 @@ switch _mode do {
         {
             cacheAllPlayerGroups pushBackUnique (group _x);
         } forEach _playableUnits;
-        BriefingArray = ("DPSO_MissionBriefingAttributes" get3DENMissionAttribute "DPSO_Briefing");
+        BriefingArray = ("dpso_MissionBriefingAttributes" get3DENMissionAttribute "dpso_Briefing");
         if (BriefingArray isEqualType "") then { BriefingArray = call compile BriefingArray;};
         if (isNil "BriefingArray") then {            
             BriefingArray = [
@@ -76,7 +76,7 @@ switch _mode do {
                 _x params ["","_conditions"];
                 {
                     if (_x isEqualType 0) then {
-                        _conditions set [_forEachIndex, (_x call DPSO_common_fnc_numToSide)];
+                        _conditions set [_forEachIndex, (_x call dpso_common_fnc_numToSide)];
                     };
                 } forEach (_conditions);
             } forEach BriefingArray;
@@ -111,7 +111,7 @@ switch _mode do {
             _x params ["","_conditions"];
             {
                 if (_x isEqualType east) then {
-                    _conditions set [_forEachIndex, (_x call DPSO_common_fnc_sideToNum)];
+                    _conditions set [_forEachIndex, (_x call dpso_common_fnc_sideToNum)];
                 };
             } forEach (_conditions);
         } forEach _array;
@@ -163,7 +163,7 @@ switch _mode do {
         fn_BriefTreeProcessUnit = {
             params ["_ctrlTree", "_treeRoot", "_doSpeak", "_unit"];        
             private _roleDesc = ((_unit get3DENAttribute "description") select 0);
-            private _color = (side _unit) call DPSO_common_fnc_sideToColor;
+            private _color = (side _unit) call dpso_common_fnc_sideToColor;
             
             if (_roleDesc == "") then {
                 _roleDesc =  getText (configfile >> "CfgVehicles" >> (typeOf _unit) >> "displayName");
@@ -180,7 +180,7 @@ switch _mode do {
                 
                         
             if (!_doSpeak) then {
-                private _unitChanList = (_unit get3DENAttribute "DPSO_Briefinglist") select 0;
+                private _unitChanList = (_unit get3DENAttribute "dpso_Briefinglist") select 0;
                 if (_unitChanList isEqualType "") then {
                     _unitChanList = call compile _unitChanList;
                 };
@@ -207,7 +207,7 @@ switch _mode do {
             private _render = _side != sideLogic; // Do not render for Zeus Group
             private _location = +_treeRoot;
             if (_render) then {
-                private _color = _side call DPSO_common_fnc_sideToColor;
+                private _color = _side call dpso_common_fnc_sideToColor;
                 private _grpIdx = _ctrlTree tvAdd [ _treeRoot, groupID _group];
                 _location = _location + [_grpIdx];
                 private _grpIcon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
@@ -226,7 +226,7 @@ switch _mode do {
             };
             
             if (!_doSpeak) then {
-                private _grpChanList = (_group get3DENAttribute "DPSO_Briefinglist") select 0;
+                private _grpChanList = (_group get3DENAttribute "dpso_Briefinglist") select 0;
                 if (_grpChanList isEqualType "") then {
                     _grpChanList = call compile _grpChanList;
                 };
@@ -332,9 +332,9 @@ switch _mode do {
         {
             private _side = _x;
             private _doSpeak = false;
-            private _location = [(_ctrlTree tvAdd [[], _side call DPSO_common_fnc_sideToString])];
+            private _location = [(_ctrlTree tvAdd [[], _side call dpso_common_fnc_sideToString])];
             
-            _ctrlTree tvSetPicture [_location, _side call DPSO_common_fnc_sideToTexture];
+            _ctrlTree tvSetPicture [_location, _side call dpso_common_fnc_sideToTexture];
             _ctrlTree tvSetValue [_location, BriefingTree_data pushBack _side];
             if (_side in _BriefConditions) then {
                 _doSpeak = true;
@@ -460,13 +460,13 @@ switch _mode do {
                 _condition pushBackUnique _entity;
             } else {
                 if (_entity isEqualType grpNull or _entity isEqualType objNull) then {
-                    _list = (_entity get3DENAttribute "DPSO_Briefinglist") params ["_value"];
+                    _list = (_entity get3DENAttribute "dpso_Briefinglist") params ["_value"];
                     if (_value isEqualType []) then {
-                        _entity set3DENAttribute ["DPSO_Briefinglist",str [_curSel]];
+                        _entity set3DENAttribute ["dpso_Briefinglist",str [_curSel]];
                     } else {
                         _value = call compile _value;
                         _value pushBackUnique _curSel;
-                        _entity set3DENAttribute ["DPSO_Briefinglist",str _value];
+                        _entity set3DENAttribute ["dpso_Briefinglist",str _value];
                     };
                 };
             };
@@ -491,7 +491,7 @@ switch _mode do {
                 _BriefEntry set [1,_condition - [_entity]];
                 if (_entity isEqualType east) then {
                     //Find and remove matching faction groups
-                    private _sideNum = _entity call DPSO_common_fnc_sideToNum;
+                    private _sideNum = _entity call dpso_common_fnc_sideToNum;
                     {
                         if (_x isEqualType "") then {
                             if (_sideNum == getNumber (configfile >> "CfgFactionClasses" >> _x >> "side")) then {
@@ -532,13 +532,13 @@ switch _mode do {
             _x params ["","_conditions"];
             {
                 if (_x isEqualType east) then {
-                    _conditions set [_forEachIndex, (_x call DPSO_common_fnc_sideToNum)];
+                    _conditions set [_forEachIndex, (_x call dpso_common_fnc_sideToNum)];
                 };
             } forEach (_conditions);
         } forEach _array;
 
         private _string = str _array;
-        set3DENMissionAttributes [["DPSO_MissionBriefingAttributes","DPSO_Briefing",_string]];
+        set3DENMissionAttributes [["dpso_MissionBriefingAttributes","dpso_Briefing",_string]];
     };
 };
 

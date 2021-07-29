@@ -2,7 +2,7 @@
 
 class CfgPatches
 {
-	class DPSO_Explosives
+	class dpso_Explosives
 	{
 		author = AUTHOR;
 		name = NAME;

@@ -1,6 +1,6 @@
 #include "\z\dpso\addons\briefing\script_component.hpp"
 /*
- *      Name: DPSO_briefing_fnc_vehiclePage
+ *      Name: dpso_briefing_fnc_vehiclePage
  *      Author: Nick, Snippers
  *
  *      Arguments:

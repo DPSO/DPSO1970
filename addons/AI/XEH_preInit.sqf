@@ -1,11 +1,6 @@
-#include "script_component.hpp"
-
-#include "XEH_PREP.sqf"
-
-
 // Reporting AI
 [
-    "DPSO_AI_Reporting",
+    "dpso_AI_Reporting",
     "CHECKBOX",
     ["Spawn Reporting", "Receive a systemchat message for any groups or vehicles that fail to spawn."],
     "DPSO AI",
@@ -18,20 +13,20 @@
 
 // Initial AI
 [
-    "DPSO_AI_InitialAI",
+    "dpso_AI_InitialAI",
     "CHECKBOX",
     ["Include Initial AI", "This will automatically apply to AI Spawns and Zeus placed AI. If enabled it will also apply to any Editor placed AI at mission start."],
     "DPSO AI",
     true,
     true,
     {
-        if (_this && { isserver }) then  { call DPSO_fnc_SetInitialAI};
+        if (_this && { isserver }) then  { call dpso_fnc_SetInitialAI};
     }
 ] call CBA_Settings_fnc_init;
 
 // AI Aiming Accuracy
 [
-    "DPSO_AI_AimingAccuracy",
+    "dpso_AI_AimingAccuracy",
     "SLIDER",
     ["Min Aiming Accuracy", "Higher value means the AI will be more likely to hit the target."],
     "DPSO AI",
@@ -44,7 +39,7 @@
 
 // AI Aiming Shake
 [
-    "DPSO_AI_AimingShake",
+    "dpso_AI_AimingShake",
     "SLIDER",
     ["Min Aiming Shake", "Higher value means the AI will be more precise."],
     "DPSO AI",
@@ -57,7 +52,7 @@
 
 // AI Aiming Speed
 [
-    "DPSO_AI_AimingSpeed",
+    "dpso_AI_AimingSpeed",
     "SLIDER",
     ["Min Aiming Speed", "Higher value means the AI can rotate and stabilize its aim faster."],
     "DPSO AI",
@@ -70,7 +65,7 @@
 
 // AI Commanding
 [
-    "DPSO_AI_Commanding",
+    "dpso_AI_Commanding",
     "SLIDER",
     ["Commanding", "Higher value means the AI can report targets faster."],
     "DPSO AI",
@@ -83,7 +78,7 @@
 
 // AI Courage
 [
-    "DPSO_AI_Courage",
+    "dpso_AI_Courage",
     "SLIDER",
     ["Courage", "Higher value means the AI can report targets faster."],
     "DPSO AI",
@@ -96,7 +91,7 @@
 
 // AI General
 [
-    "DPSO_AI_General",
+    "dpso_AI_General",
     "SLIDER",
     ["General", "Higher value improves the AI's decision making."],
     "DPSO AI",
@@ -109,7 +104,7 @@
 
 // AI Min Reload Speed
 [
-    "DPSO_AI_ReloadSpeed",
+    "dpso_AI_ReloadSpeed",
     "SLIDER",
     ["Min Reload Speed", "Higher value means the AI can switch or reload weapons faster."],
     "DPSO AI",
@@ -122,7 +117,7 @@
 
 // AI Min Spot Distance
 [
-    "DPSO_AI_SpotDistance",
+    "dpso_AI_SpotDistance",
     "SLIDER",
     ["Min Spot Distance", "Higher value means the AI is better at spotting targets."],
     "DPSO AI",
@@ -135,7 +130,7 @@
 
 // AI Min Spot Time
 [
-    "DPSO_AI_SpotTime",
+    "dpso_AI_SpotTime",
     "SLIDER",
     ["Min Spot Time", "Higher value means the AI will react faster to death, damage or enemies."],
     "DPSO AI",

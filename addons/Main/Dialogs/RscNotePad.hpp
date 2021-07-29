@@ -4,9 +4,9 @@ class RscNotepad
 	enableSimulation = 1;
 	closeOnMissionEnd = 0;
 	scriptName = "RscNotepad";
-	scriptPath = "DPSODisplays";
-	onLoad = "[""onLoad"",_this,""RscNotepad"",'DPSODisplays'] call 	(uinamespace getvariable 'BIS_fnc_initDisplay')";
-	onUnload = "[""onUnload"",_this,""RscNotepad"",'DPSODisplays'] call 	(uinamespace getvariable 'BIS_fnc_initDisplay')";
+	scriptPath = "dpsoDisplays";
+	onLoad = "[""onLoad"",_this,""RscNotepad"",'dpsoDisplays'] call 	(uinamespace getvariable 'BIS_fnc_initDisplay')";
+	onUnload = "[""onUnload"",_this,""RscNotepad"",'dpsoDisplays'] call 	(uinamespace getvariable 'BIS_fnc_initDisplay')";
 	onMouseButtonDown = "\
 		if ((_this select 1) != 0) exitWith { \
 			_ctrl = ((_this select 0) displayCtrl 1004); \
@@ -71,7 +71,7 @@ class RscNotepad
         class NotePadBackground: RscPicture
         {
             idc = 1201;
-            text = "z\dpso\addons\media\images\cuecards\notepad_CA.paa";
+            text = "z\dpso\addons\Media\images\cuecards\notepad_CA.paa";
             x = 0.288594 * safezoneW + safezoneX;
             y = 0.093 * safezoneH + safezoneY;
             w = 0.31 * safezoneW;

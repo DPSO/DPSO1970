@@ -1,5 +1,5 @@
 /*
- * Name: DPSO_common_fnc_isAdmin
+ * Name: dpso_common_fnc_isAdmin
  * Author: Snippers
  *
  * Arguments:

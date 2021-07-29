@@ -16,19 +16,50 @@ class cfgPatches {
 			"cba_ui",
             "cba_jr"
 		};
-        VERSION_CONFIG;
+        version = VERSION;
     };
 };
 
-#include "CfgSettings.hpp"
 #include "Dialogs\CfgDisplays.hpp"
-#include "CfgRespawnTemplates.hpp"
-#include "CfgEventHandlers.hpp"
-#include "CfgFactionClasses.hpp"
-#include "cfgFunctions.hpp"
-#include "CfgScriptPaths.hpp"
-#include "CfgEditorCategories.hpp"
-#include "CfgVehicleIcons.hpp"
-#include "CfgWorlds.hpp"
 #include "CfgMarkers.hpp"
-//#include "radio.hpp"
+#include "CfgRespawnTemplates.hpp"
+
+
+class Extended_PreInit_EventHandlers {
+    class dpso_Main_Event {
+        init = "call compile preprocessFileLineNumbers 'z\dpso\addons\main\XEH_preInit.sqf'";
+    };
+};
+
+
+class CfgFactionClasses {    
+    class NO_CATEGORY;
+    class CLASS(BLU)  {
+        displayName = PREFIX;//Faction name in-game
+        icon = LOGO_PATH;
+		priority = 0;
+		side = 1; // 1 Blufor 2 opfor 3 independant.
+    };
+    class CLASS(IND) {
+        displayName = PREFIX;
+        icon = LOGO_PATH;
+        side = 2;
+        priority = 2;
+    };
+    class dpso_Modules: NO_CATEGORY
+	{
+		displayName = PREFIX;
+	};
+};
+
+class CfgFunctions {
+    #include "cfgFunctions.hpp"
+};
+
+#include "Functions\CHVD\dialog.hpp"
+#include "Functions\YAINA\General\crewNamesTitles.hpp"
+
+class CfgScriptPaths
+{
+	dpsoDisplays = "z\dpso\addons\main\Scripts\UI\Displays\";
+};

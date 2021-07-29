@@ -1,5 +1,5 @@
 /*
-Function: DPSO_fnc_Sound3DOnObject
+Function: dpso_fnc_Sound3DOnObject
 
 Description:
 	Plays a sound on an object by attaching a dummy object to said object. Dummy
@@ -24,7 +24,7 @@ Author:
 
 // If run locally, run on server instead
 if (!isServer) exitWith {
-	_this remoteExec ["DPSO_fnc_Sound3DOnObject", 2];
+	_this remoteExec ["dpso_fnc_Sound3DOnObject", 2];
 };
 
 params [

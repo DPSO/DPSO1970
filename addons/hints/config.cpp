@@ -3,7 +3,7 @@
 
 class CfgPatches {
 	
-	class DPSO_Hints {
+	class dpso_Hints {
 		author = AUTHOR;
 		name = COMPONENT_NAME;
 		url = URL;
@@ -16,7 +16,7 @@ class CfgPatches {
 		authors[] = {
 			"O. Jemineh"
 		};
-		VERSION_CONFIG;
+		version = VERSION;
 	};
 	
 };

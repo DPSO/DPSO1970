@@ -1,6 +1,6 @@
 # About
 
-CBA Settings Static Addon Userconfig. Does not conform to DPSO Mods naming, made from [template](https://github.com/CBATeam/CBA_A3/tree/master/template/cba_settings_userconfig) provided by CBA.
+CBA Settings Static Addon Userconfig. Does not conform to dpso Mods naming, made from [template](https://github.com/CBATeam/CBA_A3/tree/master/template/cba_settings_userconfig) provided by CBA.
 
 ### Authors
 

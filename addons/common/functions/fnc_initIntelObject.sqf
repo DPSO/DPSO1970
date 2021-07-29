@@ -14,14 +14,14 @@
  * None
  *
  * Example:
- * [object,unit,data,false] call DPSO_common_fnc_initIntelObject;
+ * [object,unit,data,false] call dpso_common_fnc_initIntelObject;
  *
  */
 
 params ["_object","_caller",["_data",[]],["_deleteObject",false],["_mode", "init"],"_diaryVar"];
 private ["_scriptName"];
 
-_scriptName = "DPSO_common_fnc_initIntelObject";
+_scriptName = "dpso_common_fnc_initIntelObject";
 
 switch _mode do {
     case "init": {
@@ -57,7 +57,7 @@ switch _mode do {
             }
         ] call BIS_fnc_addScriptedEventHandler;
 
-        _callerName = if (_caller == DPSO_unit) then {profilename} else {name _caller};
+        _callerName = if (_caller == dpso_unit) then {profilename} else {name _caller};
 
         //--- Create marker to which diary link is pointed
         _marker = createmarker [_var,position _object];
@@ -115,11 +115,11 @@ switch _mode do {
 
         ["intelAdded",[_title,_texture]] call bis_fnc_showNotification;
 
-        if !(DPSO_unit diarysubjectexists _scriptName) then {
-            DPSO_unit creatediarysubject [_scriptName,localize "STR_A3_BIS_fnc_initIntelObject_intel"];
+        if !(dpso_unit diarysubjectexists _scriptName) then {
+            dpso_unit creatediarysubject [_scriptName,localize "STR_A3_BIS_fnc_initIntelObject_intel"];
         };
 
-        DPSO_unit creatediaryrecord [_scriptName,[_title,_text]];
+        dpso_unit creatediaryrecord [_scriptName,[_title,_text]];
 
         waituntil {_scriptName call bis_fnc_selectDiarySubject;};
     };

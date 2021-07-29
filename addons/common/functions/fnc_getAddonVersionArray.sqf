@@ -12,7 +12,7 @@
  *	<ARRAY>
  *	
  *	Example:
- *	["DPSO_core"] call dpso_fnc_getAddonVersionArray;
+ *	["dpso_core"] call dpso_fnc_getAddonVersionArray;
  *	
  */
 

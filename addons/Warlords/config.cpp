@@ -2,7 +2,7 @@
 
 class CfgPatches
 {
-	class DPSO_Warlords
+	class dpso_Warlords
 	{
 		author = AUTHOR;
 		name = NAME;

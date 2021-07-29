@@ -1,5 +1,5 @@
 /*
-Function: DPSO_fnc_CivBreakPatrol
+Function: dpso_fnc_CivBreakPatrol
 
 Description:
 	Helper function to handle civilians breaking away from their patrol if under fire.

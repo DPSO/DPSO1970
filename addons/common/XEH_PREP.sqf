@@ -20,7 +20,7 @@ PREP(serializeWaypoint);
 PREP(serializeWaypoints);
 PREP(moduleUnits);
 PREP(checkVersionArray);
-PREP(checkDPSOVersion);
+PREP(checkdpsoVersion);
 PREP(arrayToStringArray);
 PREP(randPosArea);
 PREP(drawLines);

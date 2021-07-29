@@ -5,8 +5,8 @@
 
 ADDON = false;
 
-DPSO_unit = objNull;
-uiNamespace setVariable ["DPSO_unit", objNull];
+dpso_unit = objNull;
+uiNamespace setVariable ["dpso_unit", objNull];
 
 enableSaving [false,false]; // Disables save when aborting.
 enableTeamSwitch false; // Disables team switch.
@@ -22,7 +22,7 @@ if is3DEN call {
     call FUNC(edenInit);
 };
 
-isDPSO = ((getMissionConfigValue ["VERSION",[0,0,0]] select 0) > 0);
+isdpso = ((getMissionConfigValue ["VERSION",[0,0,0]] select 0) > 0);
 
 
 // Rig up server event handler for variable sync requests.
@@ -50,6 +50,7 @@ GVAR(acre) = IS_MOD_LOADED(acre_main);
 GVAR(tfar) = IS_MOD_LOADED(tfar_core);
 GVAR(playerMarkerIdx) = 0;
 GVAR(aceThrowing) = IS_MOD_LOADED(ace_advanced_throwing);
+
 
 // Handling for running code after settings are initialized
 GVAR(settingsInitialized) = false;

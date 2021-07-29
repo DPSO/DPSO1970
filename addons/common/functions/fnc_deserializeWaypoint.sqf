@@ -1,5 +1,5 @@
 /*
- * Name: DPSO_common_fnc_deserializeWaypoint
+ * Name: dpso_common_fnc_deserializeWaypoint
  * Author: Head
  *
  * Arguments:

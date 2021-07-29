@@ -1,5 +1,5 @@
 /*
- * Name: DPSO_common_fnc_numToSide
+ * Name: dpso_common_fnc_numToSide
  * Author: Snippers
  *
  * Arguments:

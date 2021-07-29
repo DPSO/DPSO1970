@@ -1,5 +1,5 @@
 /*
-Function: DPSO_fnc_AddSelfAction
+Function: dpso_fnc_AddSelfAction
 
 Description:
 	Adds an action to a player. The action is added only to the clients on
@@ -35,7 +35,7 @@ Examples:
 			[],
 			"true",
 			true
-		] call DPSO_fnc_AddSelfAction;
+		] call dpso_fnc_AddSelfAction;
 	(end)
 
 Author:
@@ -63,7 +63,7 @@ if (player != _player) exitWith {
 		_args,
 		_condition,
 		_removeCompleted
-	] remoteExec ["DPSO_fnc_AddSelfAction", _player];
+	] remoteExec ["dpso_fnc_AddSelfAction", _player];
 };
 
 if (isClass (configFile >> "CfgPatches" >> "ace_main")) then {
@@ -97,7 +97,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_main")) then {
 } else {
 
 	// Fix the condition string (replace _player with _this)
-	_condition = [_condition, "_player", "_this", nil, false] call DPSO_fnc_FindReplaceString;
+	_condition = [_condition, "_player", "_this", nil, false] call dpso_fnc_FindReplaceString;
 
 	_player addAction [
 		_title,

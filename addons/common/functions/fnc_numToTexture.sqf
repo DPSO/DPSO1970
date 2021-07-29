@@ -1,5 +1,5 @@
 /*
- * Name: DPSO_common_fnc_numToTexture
+ * Name: dpso_common_fnc_numToTexture
  * Author: Snippers
  *
  * Arguments:

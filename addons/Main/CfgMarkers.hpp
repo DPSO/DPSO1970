@@ -197,5 +197,4 @@ class CfgMarkers {
 	class mil_objective	{
 		scope=2;
 	};
-
 };

@@ -15,7 +15,7 @@ switch (_mode) do {
 		_viewDistVar = "CHVD_" + _varString;
 		_viewDist = call compile _viewDistVar;
 		_objVDVar = "CHVD_" + _varString + "Obj";
-		_objVD = _viewDist * _percentage min DPSO_Main_ViewDistanceMaxObjectDistance;
+		_objVD = _viewDist * _percentage min dpso_Main_ViewDistanceMaxObjectDistance;
 		
 		//disable VD slider and textbox because they are not in use
 		ctrlEnable [_sliderCtrl, false];

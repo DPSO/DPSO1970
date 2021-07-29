@@ -1,6 +1,6 @@
 #include "\z\dpso\addons\common\script_component.hpp"
 /*
- * Name: DPSO_common_fnc_endMission
+ * Name: dpso_common_fnc_endMission
  * Author: Snippers
  *
  * Arguments:
@@ -19,14 +19,14 @@ if (!isServer) exitWith {}; // Only run on server.
 if (missionNamespace getVariable [QGVAR(ending),false]) exitWith {}; // Already trying to end.
 
 // Message admins
-private _message = format["[DPSO] Ending mission..."];
+private _message = format["[dpso] Ending mission..."];
 [_message,'tac1_admin_fnc_messageAdmin',true] call BIS_fnc_MP;
 
 GVAR(endMissionWait) = -1;
 GVAR(ending) = true;
 
 if (!isNil "ocap_fnc_exportData") then {
-    _message = format["[DPSO] OCAP detected exporting (10 second timeout)..."];
+    _message = format["[dpso] OCAP detected exporting (10 second timeout)..."];
     [_message,'tac1_admin_fnc_messageAdmin',true] call BIS_fnc_MP;
 
     GVAR(endMissionWait) = time + 10; //Give OCAP 10 seconds.
@@ -35,7 +35,7 @@ if (!isNil "ocap_fnc_exportData") then {
     [] spawn {
          {
             [] call ocap_fnc_exportData;
-            private _message = format["[DPSO] OCAP Export complete. Ending..."];
+            private _message = format["[dpso] OCAP Export complete. Ending..."];
             [_message,'tac1_admin_fnc_messageAdmin',true] call BIS_fnc_MP;
             GVAR(endMissionWait) = -1;
          } call CBA_fnc_directCall;

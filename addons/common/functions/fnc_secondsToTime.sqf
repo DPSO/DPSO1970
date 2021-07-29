@@ -1,5 +1,5 @@
 /*
- * Name: DPSO_common_fnc_secondsToTime
+ * Name: dpso_common_fnc_secondsToTime
  * Author: Head
  *
  * Arguments:

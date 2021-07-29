@@ -1,6 +1,6 @@
 params ["_logic"];
 private _units = [];
-switch (_logic getVariable ["DPSOUnits",-1]) do {
+switch (_logic getVariable ["dpsoUnits",-1]) do {
     case (-1): {
         _units append allUnits;
     };

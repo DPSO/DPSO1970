@@ -6,7 +6,7 @@ params ["_display"];
 
 // Deprecated in newer versions, replaced by CBA system
 // https://github.com/CBATeam/CBA_A3/wiki/Name-Groups-in-Lobby
-if ([[1,1,0]] call FUNC(checkDPSOVersion)) exitWith {};
+if ([[1,1,0]] call FUNC(checkdpsoVersion)) exitWith {};
 
 private _fn_update_group_names_in_lobby = {
     params ["_display"];

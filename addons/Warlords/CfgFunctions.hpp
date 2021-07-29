@@ -1,6 +1,6 @@
-class DPSO_Warlords {
+class dpso_Warlords {
 
-	tag = "DPSO";
+	tag = "dpso";
 	class Warlords {
 
 		file = "z\dpso\addons\Warlords\Functions";

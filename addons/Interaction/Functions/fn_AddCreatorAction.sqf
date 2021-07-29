@@ -1,5 +1,5 @@
 /*
-Function: DPSO_fnc_AddCreatorAction
+Function: dpso_fnc_AddCreatorAction
 
 Description:
 	Adds an action for the mission creator that allows executing code/functions
@@ -29,7 +29,7 @@ Examples:
 	{hint "Mission started!";},
 	{true},
 	["ExampleActions"]
-] call DPSO_fnc_AddCreatorAction;
+] call dpso_fnc_AddCreatorAction;
 	(end)
 
 Author:
@@ -37,7 +37,7 @@ Author:
 */
 
 if !(isClass (configFile >> "CfgPatches" >> "ace_main")) exitWith {};
-if (!DPSO_CreatorActions_Master) exitWith {};
+if (!dpso_CreatorActions_Master) exitWith {};
 
 params [
     "_actionName",
@@ -58,5 +58,5 @@ _action = [
 ] call ACE_interact_menu_fnc_createAction;
 
 [
-	"DPSO_RegisterCreatorAction", [_action, _actionPath, _actionName], format["DPSO_CAJIP_%1", _actionName]
+	"dpso_RegisterCreatorAction", [_action, _actionPath, _actionName], format["dpso_CAJIP_%1", _actionName]
 ] call CBA_fnc_globalEventJIP;

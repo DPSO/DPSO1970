@@ -6,8 +6,8 @@ class CfgDifficultyPresets {
     class GVAR(Difficulty): Custom {
         displayName = PREFIX;
 
-        description = "Custom DPSO settings";
-        optionDescription = "Custom DPSO settings";
+        description = "Custom dpso settings";
+        optionDescription = "Custom dpso settings";
 
         levelAI = QGVAR(LevelAI);
 

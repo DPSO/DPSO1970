@@ -1,6 +1,6 @@
 // Template Credits (be fair do not remove)
-DPSO_unit createDiarySubject ["Credits","Credits"];
-DPSO_unit createDiaryRecord ["Credits", ["Template Credits","
+dpso_unit createDiarySubject ["Credits","Credits"];
+dpso_unit createDiaryRecord ["Credits", ["Template Credits","
 <font size='20'>General</font><br/>
 This mission is made with the [dpso] Mission Template.<br/>
 The Scripts and Mods used in this Template are searched,<br/>

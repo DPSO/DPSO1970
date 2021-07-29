@@ -1,5 +1,5 @@
 /*
-Function: DPSO_fnc_initInspectableIntel
+Function: dpso_fnc_initInspectableIntel
 
 Description:
 	Initializes a given object as a piece of inspectable intel.
@@ -45,7 +45,7 @@ Examples:
 			,west
 			,true
 		]
-	] call DPSO_fnc_initInspectableIntel;
+	] call dpso_fnc_initInspectableIntel;
 	(end)
 
 Author:
@@ -54,7 +54,7 @@ Author:
 */
 
 // TODO: Allow sharing the intel with specific groups, units and whatnot (needs
-// 		 testing, sharing with side and one specific DPSO group works though)
+// 		 testing, sharing with side and one specific dpso group works though)
 
 if (!isServer) exitWith {};
 
@@ -74,7 +74,7 @@ _args params [
 
 
 // Add the action
-[_object, _actionTitle, _diaryRecord select 0] remoteExec ["DPSO_fnc_SetIntelAction",0,true];
+[_object, _actionTitle, _diaryRecord select 0] remoteExec ["dpso_fnc_SetIntelAction",0,true];
 
 
 // Set the diary picture
@@ -99,7 +99,7 @@ _diaryRecord append [""];
 if (typeName _sharedWith == "STRING") then {
 	_recipients = [];
 	{
-		if (side _x == west && {_x getVariable ["DPSO_section", "Command"] == _sharedWith}) then {
+		if (side _x == west && {_x getVariable ["dpso_section", "Command"] == _sharedWith}) then {
 			_recipients pushBackUnique _x;
 		};
 	} forEach allGroups;
@@ -120,7 +120,7 @@ if (_notifySide) then {
 		"IntelObjectFound",
 		{
 			params[ "", "_foundBy" ];
-			[format ["Intel collected by %1", name _foundBy], [1, -0.2], "#339900", 0.5] call DPSO_fnc_dynamicText;
+			[format ["Intel collected by %1", name _foundBy], [1, -0.2], "#339900", 0.5] call dpso_fnc_dynamicText;
 		}
 	] call BIS_fnc_addScriptedEventHandler;
 };
