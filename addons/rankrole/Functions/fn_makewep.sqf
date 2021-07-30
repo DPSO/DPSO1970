@@ -12,7 +12,7 @@ if (hasInterface) then {
     player setUnitTrait ["loadCoef", .25];
 
     player setUnitTrait ["vn_artillery", false,true];
-
+    daoWhitelisted=FALSE;
     
 };
 

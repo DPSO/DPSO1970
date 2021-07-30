@@ -75,23 +75,19 @@ force force dpso_interactions_gear_access_enabled = 1;
 force force dpso_interactions_gear_access_hint = true;
 force force dpso_interactions_global_sounds = true;
 force force dpso_interactions_tapshoulder_ai = false;
-dpso_interactions_tapshoulder_hint = true;
+
 
 // dpso Main
 force force dpso_Main_ArsenalSaveLoad = true;
-force force dpso_Main_CHViewDistance = false;
 force force dpso_Main_Diary = true;
 force force dpso_Main_DynamicGroups = true;
-force force dpso_Main_DynamicSim = false;
 force force dpso_Main_Earplugs = false;
-force force dpso_Main_FatigueVanilla = true;
 force force dpso_Main_FlipVehicle = true;
 force force dpso_Main_FPSCounter = true;
 force force dpso_Main_LockCamVehicle = false;
 force force dpso_Main_Logging = false;
 force force dpso_Main_MapIcons = true;
 force force dpso_Main_MaydayAccess = 2;
-force force dpso_Main_PilotCheck = true;
 force force dpso_Main_QSMagRepack = true;
 force force dpso_Main_TFARTerrainInterference = 1;
 force force dpso_Main_TFARTransmitRange = 2.5;
@@ -158,10 +154,10 @@ force force TFAR_setting_DefaultRadio_Backpack_Independent = "TFAR_anprc155";
 force force TFAR_setting_DefaultRadio_Backpack_west = "TFAR_rt1523g";
 force force TFAR_setting_DefaultRadio_Personal_east = "TFAR_fadak";
 force force TFAR_setting_DefaultRadio_Personal_Independent = "TFAR_anprc148jem";
-force force TFAR_setting_DefaultRadio_Personal_West = "TFAR_anprc152";
+force force TFAR_setting_DefaultRadio_Personal_West = "vn_b_item_radio_urc10";
 force force TFAR_setting_DefaultRadio_Rifleman_East = "TFAR_pnr1000a";
 force force TFAR_setting_DefaultRadio_Rifleman_Independent = "TFAR_anprc154";
-force force TFAR_setting_DefaultRadio_Rifleman_West = "TFAR_rf7800str";
+force force TFAR_setting_DefaultRadio_Rifleman_West = "vn_b_item_radio_urc10";
 force force TFAR_spectatorCanHearEnemyUnits = true;
 force force TFAR_spectatorCanHearFriendlies = true;
 force force TFAR_takingRadio = 2;

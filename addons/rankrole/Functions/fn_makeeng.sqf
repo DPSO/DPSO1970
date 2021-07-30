@@ -12,6 +12,7 @@ if (hasInterface) then {
     player setUnitTrait ["loadCoef", .5];
 
     player setUnitTrait ["vn_artillery", false,true];
+    daoWhitelisted=FALSE;
     };
 
 [ format [hint_tpl_default, "Engineer"] ] call dpso_fnc_hint;

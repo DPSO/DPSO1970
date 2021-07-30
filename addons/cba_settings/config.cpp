@@ -8,7 +8,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"cba_settings"};
         author = AUTHOR;
-        authors[] = {"commy2"};
+        authors[] = {"YonV"};
         url = URL;
         version = VERSION;
     };

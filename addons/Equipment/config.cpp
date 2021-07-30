@@ -22,7 +22,7 @@ class CfgFunctions {
 };
 
 #include "cfg3Den.hpp"
-
+#include "CfgVehicles.hpp"
 
 class Extended_InitPost_EventHandlers {
     class ReammoBox_F {

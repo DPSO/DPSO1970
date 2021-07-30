@@ -15,7 +15,7 @@ if (!hasInterface) exitwith {};
 		{},
 		[],
 		1,
-		-92,
+		0,
 		false,
 		false
 	] call BIS_fnc_holdActionAdd;
@@ -35,7 +35,7 @@ if (!hasInterface) exitwith {};
 		{},
 		[],
 		1,
-		-92,
+		0,
 		false,
 		false
 	] call BIS_fnc_holdActionAdd;
